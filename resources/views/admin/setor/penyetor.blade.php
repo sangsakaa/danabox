@@ -37,7 +37,7 @@
                     </svg></button>
             </div>
         </form>
-        <table class=" table table-auto w-full border rounded-md ">
+        <table class="w-full whitespace-no-wrap table table-auto  border rounded-md ">
             <thead class=" bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600 ">
                 <tr class=" text-left uppercase">
                     <th class=" px-2 py-2 rounded-md">#</th>
