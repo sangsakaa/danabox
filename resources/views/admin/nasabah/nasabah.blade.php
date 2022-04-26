@@ -9,7 +9,7 @@
     <div class="p-6 overflow-hidden grid w-full   bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/nasabah" method="post">
             @csrf
-            <div class=" grid grid-cols-1 sm:grid-cols-3">
+            <div class=" grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <input required value="{{ old('nama_nasabah') }}" name="nama_nasabah" type="text"
                     class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-1 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
