@@ -13,7 +13,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-
+        <script src="https://cdn.tailwindcss.com"></script>
         <!-- Styles -->
         <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
