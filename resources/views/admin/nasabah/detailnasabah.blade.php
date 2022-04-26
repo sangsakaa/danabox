@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Detail Nasabah') }}
             </h2>
-            <x-button target="_blank" href="#" variant="black" class="justify-center max-w-xs gap-2 ">
+            <x-button href="/nasabah" variant="black" class="justify-center max-w-xs gap-2 ">
                 <x-icons.github class="w-6 h-6" aria-hidden="true" />
                 <span>Star on Github</span>
             </x-button>
@@ -25,11 +25,12 @@
 
         </div>
     </div>
+
     <div
         class=" font-semibold text-3xl text-purple-600 px-6 p-2 mt-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         Detail Setoran
     </div>
-    <div class="p-6 mt-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+    <div class="p-2 mt-2 overflow-auto grid sm:grid-cols-1  bg-white  rounded-lg shadow-lg dark:bg-dark-eval-1">
         <table class=" table table-auto w-full border rounded-md ">
             <thead class=" bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600 ">
                 <tr class=" text-left uppercase">
@@ -57,10 +58,10 @@
                 @endforeach
                 <tr class=""></tr>
                 <td>
-
                 </td>
                 </tr>
             </tbody>
         </table>
+
     </div>
 </x-app-layout>

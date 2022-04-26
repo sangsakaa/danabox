@@ -17,7 +17,7 @@ class PenyetorController extends Controller
      */
     public function index()
     {
-        $setor = Setor::all();
+        $setor = Setor::paginate(2);
         $penyetor = Penyetor::all();
         $nasabah = Nasabah::all();
         return view('admin/setor/penyetor',['penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah]);

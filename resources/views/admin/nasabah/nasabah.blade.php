@@ -37,10 +37,9 @@
 
         </form>
         <div class="overflow-hidden mb-2 w-full rounded-lg border shadow-xs">
-            <div class="overflow-x-auto w-full">
-                <table class="w-full whitespace-no-wrap table table-auto  border rounded-md ">
-                    <thead
-                        class=" bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600 ">
+            <div class=" grid grid-cols-1  overflow-x-auto w-full">
+                <table class="  w-full whitespace-no-wrap table table-auto  border rounded-md ">
+                    <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
                         <tr class=" text-left uppercase">
                             <th class=" px-2 py-2 rounded-md">#</th>
                             <th class=" px-1">Nasabah</th>
