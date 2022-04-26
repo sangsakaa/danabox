@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Kordes;
 use App\Models\Nasabah;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,7 +17,7 @@ class Penyetor extends Model
     }
     public function kordes()
     {
-        return $this->belongsTo(kordes::class,'kordes_id','id');
+        return $this->belongsTo(Kordes::class,'kordes_id','id');
     }
 
 }
