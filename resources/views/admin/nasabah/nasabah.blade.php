@@ -33,8 +33,6 @@
                 <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md"> Tambah Nasabah
                 </button>
             </div>
-
-
         </form>
         <div class="overflow-hidden mb-2 w-full rounded-lg border shadow-xs">
             <div class=" grid grid-cols-1  overflow-x-auto w-full">

@@ -12,12 +12,12 @@
             </div>
         </div>
     </x-slot>
-    <div class="p-2 sm:text-sm overflow-hidden  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+    <div class="p-2 sm:text-sm overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/penyetor" method="post">
             @csrf
-            <div class=" grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <input name="tgl_setor" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval- grid-col-1 sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
                 <select name="nasabah_id" id=""
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600">
@@ -29,7 +29,6 @@
                 <input name="kordes_id" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" kordes_id" value="1">
-
                 <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
