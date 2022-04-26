@@ -9,34 +9,29 @@
     <div class="p-6 overflow-hidden grid w-full   bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/nasabah" method="post">
             @csrf
-            <div class=" grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <input required value="{{ old('nama_nasabah') }}" name="nama_nasabah" type="text"
-                    class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-1 rounded-md mb-1 text-purple-600"
+                    class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
                 <select required name="jenis_kelamin" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-1 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Jenis Kelamin</option>
                     <option value="L">Laki Laki</option>
                     <option value="P">Perempuan</option>
                 </select>
                 <input required name="alamat" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" alamat">
 
                 <input required name="kecamatan" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" kecamatan" value="Muara Komam">
 
                 <input required name="kabupaten" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" kabupaten" value="Paser">
-                <button type=" submit" class="  bg-purple-600 px-2 py-1 mb-1 text-white rounded-md"> <svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-plus-fill " viewBox="0 0 16 16">
-                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                    </svg></button>
+                <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md"> Tambah Nasabah
+                </button>
             </div>
 
 
