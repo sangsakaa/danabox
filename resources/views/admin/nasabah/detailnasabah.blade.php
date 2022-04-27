@@ -56,12 +56,7 @@
                     </td>
                 </tr>
                 @endforeach
-                <tr class=""></tr>
-                <td>
-                </td>
-                </tr>
             </tbody>
         </table>
-
     </div>
 </x-app-layout>
