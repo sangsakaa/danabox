@@ -1219,6 +1219,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+}
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
 }
@@ -1319,6 +1327,9 @@ select {
 .pl-3 {
   padding-left: 0.75rem;
 }
+.pl-2 {
+  padding-left: 0.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1358,6 +1369,10 @@ select {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -1860,6 +1875,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.dark .dark\:text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
+}
 .dark .dark\:before\:border-l-gray-600::before {
   content: var(--tw-content);
   --tw-border-opacity: 1;
@@ -1886,6 +1905,10 @@ select {
 .dark .dark\:hover\:bg-dark-eval-2:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(42 47 66 / var(--tw-bg-opacity));
+}
+.dark .dark\:hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 .dark .dark\:hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
@@ -1999,13 +2022,48 @@ select {
     padding: 0.5rem;
   }
 
+  .sm\:p-1 {
+    padding: 0.25rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   .sm\:pt-0 {
     padding-top: 0px;
+  }
+
+  .sm\:pl-4 {
+    padding-left: 1rem;
+  }
+
+  .sm\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .sm\:pl-2 {
+    padding-left: 0.5rem;
+  }
+
+  .sm\:pl-1 {
+    padding-left: 0.25rem;
   }
 
   .sm\:text-left {

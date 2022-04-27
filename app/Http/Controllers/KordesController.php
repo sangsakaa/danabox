@@ -14,7 +14,8 @@ class KordesController extends Controller
      */
     public function index()
     {
-        //
+        $kordes = Kordes::all();
+        return view('admin/kordes/kordes',['kordes'=>$kordes]);
     }
 
     /**

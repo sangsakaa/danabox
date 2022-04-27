@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KordesController;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\PenyetorController;
 use App\Http\Controllers\SetorController;
@@ -43,6 +44,7 @@ Route::resource('nasabah', NasabahController::class)->middleware(['auth']);
 Route::resource('setor', SetorController::class)->middleware(['auth']);
 Route::resource('penyetor', PenyetorController::class)->middleware(['auth']);
 Route::resource('dashboard', DashboardController::class)->middleware(['auth','verified']);
+Route::resource('kordes', KordesController::class)->middleware(['auth','verified']);
 
 
 require __DIR__ . '/auth.php';

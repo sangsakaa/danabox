@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col grid-cols-1 md:px-4 gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="text-xl font-semibold leading-tight">
+            <h2 class="  text-5xl text-purple-600 font-semibold leading-tight">
                 {{ __('Data Nasabah') }}
             </h2>
             <x-button href="/penyetor" variant="purple" class="justify-center max-w-xs gap-2">
@@ -10,7 +10,7 @@
             </x-button>
         </div>
     </x-slot>
-    <div class="p-6 overflow-hidden  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+    <div class=" p-2 overflow-hidden  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/setor" method="post">
             @csrf
             <div class=" flex gap-2 grid-cols-1 ">
@@ -56,7 +56,7 @@
             </thead>
             <tbody>
                 @foreach( $setor as $nas)
-                <tr class=" border border-bottom ">
+                <tr class=" border border-bottom hover:bg-gray-100 dark:text-purple-600   ">
                     <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
                     <td class=" px-1">{{$nas->tgl_setor}}</td>
                     <td class=" px-1">{{$nas->nasabah->nama_nasabah}}</td>
@@ -104,22 +104,11 @@
                 </tr>
             </tbody>
         </table>
-        <div class="dark:bg-dark-eval-1 bg-blue-50 px-4 py-2 mt-2  rounded-md  grid grid-cols-1">
-            Note :
-            <ul>
-                <li class=" capitalize">
-                    1. yang berwarna hijau menjadi KAS Kecamatan
-                </li>
-                <li class=" capitalize">
-                    2. yang berwarna merah menjadi setoran wajib ke kabupaten
-                </li>
-            </ul>
-        </div>
-        <div class="dark:bg-dark-eval-1 bg-green-50 px-4 py-2 mt-2  rounded-md  grid grid-cols-1">
+        <div class="dark:bg-dark-eval-1 bg-green-50 px-4 py-1 mt-2  rounded-md  grid grid-cols-1">
             <div class=" font-semibold  text-right">Total Kas Dana Box</div>
             <div class=" font-semibold  text-right">{{'Rp.'. number_format($setor->sum('setor_box'),0,',','.')}}</div>
         </div>
-        <div class="dark:bg-dark-eval-1 bg-green-100 px-4 py-2 mt-2  rounded-md  grid grid-cols-1">
+        <div class="dark:bg-dark-eval-1 bg-green-100 px-4 py-1 mt-2  rounded-md  grid grid-cols-1">
             <div class=" text-right font-semibold">Total Dana SP</div>
             <div class="font-semibold  text-right">{{ 'Rp.'.number_format($setor->sum('setor_sp'),0,',','.')}}</div>
         </div>
@@ -155,5 +144,6 @@
                 {{'Rp.'.number_format(($setor->sum('setor_box') - $setor->sum('setor_box')*15/100)+($setor->sum('setor_sp')-$setor->sum('setor_sp')*15/100),0,',','.')}}
             </div>
         </div>
+
     </div>
 </x-app-layout>

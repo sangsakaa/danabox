@@ -62,7 +62,7 @@
 
     <a href="{{ route('dashboard.index') }}">
         <x-application-logo aria-hidden="true" class="w-10 h-10" />
-        <span class="sr-only">K UI</span>
+        <span class="sr-only">K Ua</span>
     </a>
 
     <x-button type="button" iconOnly variant="secondary" srText="Open main menu"
