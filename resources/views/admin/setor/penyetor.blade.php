@@ -4,15 +4,10 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Data Penyetor') }}
             </h2>
-            <div class=" grid grid-cols-1 sm:grid-cols-1 px-6">
-                <x-button href="/dashboard" variant="black" class="justify-center max-w-xs gap-2">
-                    <x-icons.github class="w-6 h-6" aria-hidden="true" />
-                    <span>Star on Github</span>
-                </x-button>
-            </div>
+
         </div>
     </x-slot>
-    <div class="p-2 sm:text-sm overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+    <div class="p-6 sm:text-sm overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/penyetor" method="post">
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
@@ -34,7 +29,7 @@
                 </button>
             </div>
         </form>
-        <div class=" overflow-auto  text-sm p-1">
+        <div class=" overflow-auto  text-sm ">
             <table class="w-full whitespace-no-wrap table table-auto   ">
                 <thead class=" border  shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-lg mb-1 text-purple-600 ">
                     <tr class=" text-left uppercase">

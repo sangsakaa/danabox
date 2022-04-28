@@ -28,7 +28,7 @@
     </x-sidebar.link>
     <x-sidebar.link title="Nasabah" href="{{ route('nasabah.index') }}" :isActive="request()->routeIs('nasabah.index')">
         <x-slot name="icon">
-            <x-icons.dashboard class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+            <x-icons.dashboard class="flex-bank w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
     <div x-transition x-show="isSidebarOpen || isSidebarHovered" class="text-sm text-gray-500">Report</div>

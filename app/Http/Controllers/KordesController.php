@@ -14,7 +14,7 @@ class KordesController extends Controller
      */
     public function index()
     {
-        $kordes = Kordes::all();
+        $kordes = Kordes::paginate(4);
         return view('admin/kordes/kordes',['kordes'=>$kordes]);
     }
 
@@ -36,7 +36,10 @@ class KordesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kordes = new Kordes ;
+        $kordes->nama_kordes = $request->nama_kordes;
+        $kordes->save();
+        return redirect()->back();
     }
 
     /**
@@ -81,6 +84,8 @@ class KordesController extends Controller
      */
     public function destroy(Kordes $kordes)
     {
-        //
+        
+        Kordes::destroy($kordes->id);
+        return redirect()->back();
     }
 }

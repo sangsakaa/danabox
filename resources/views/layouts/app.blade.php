@@ -41,7 +41,7 @@
 
                     <!-- Page Heading -->
                     <header>
-                        <div class="p-4 sm:p-2">
+                        <div class="p-2 sm:p-6  sm:px-6  rounded-md">
                             {{ $header }}
                         </div>
                     </header>
