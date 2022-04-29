@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('kordes', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kordes');
+            $table->string('nasabah_id');
+            $table->date('awal_jabat')->nullable();
+            $table->date('akhir_jabat')->nullable();
             $table->timestamps();
         });
     }

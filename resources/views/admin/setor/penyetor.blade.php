@@ -29,12 +29,12 @@
                 </button>
             </div>
         </form>
-        <div class=" overflow-auto  text-sm ">
-            <table class="w-full whitespace-no-wrap table table-auto   ">
+        <div class=" overflow-auto  text-sm rounded-lg ">
+            <table class="w-full whitespace-no-wrap table table-auto    ">
                 <thead class=" border  shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-lg mb-1 text-purple-600 ">
-                    <tr class=" text-left uppercase">
+                    <tr class=" text-sm sm:text-2 text-left  sm:uppercase">
                         <th class=" px-2 py-2 rounded-md">#</th>
-                        <th class=" px-1">Tgl Setor</th>
+                        <th class=" px-1">Tgl Setoran</th>
                         <th class=" px-1">Bulan</th>
                         <th class=" px-1">Penyetor</th>
                         <th class=" px-1">Alamat</th>
@@ -89,6 +89,7 @@
 
                     </tr>
                     @endforeach
+
                 </tbody>
             </table>
         </div>

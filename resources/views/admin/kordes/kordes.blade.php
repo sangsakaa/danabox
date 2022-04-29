@@ -10,27 +10,29 @@
         <form action="/kordes" method="post">
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
-                <input required value="{{ old('nama_kordes') }}" name="nama_kordes" type="text"
-                    class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-2 rounded-md mb-1 text-purple-600"
-                    placeholder=" nasabah">
-                <select required name="jenis_kelamin" id=""
+                <select required name="nasabah_id" id=""
                     class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600">
-                    <option value="">Pilih Jenis Kelamin</option>
-                    <option value="L">Laki Laki</option>
-                    <option value="P">Perempuan</option>
-                </select>
-                <input required name="alamat" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
-                    placeholder=" alamat">
+                    <option value="">Pilih Nasabah </option>
+                    @foreach ($nasabah as $nasabah)
+                    <option value="{{$nasabah->nama_nasabah}}">{{$nasabah->nama_nasabah}}</option>
+                    @endforeach
 
-                <input required name="kecamatan" type="hidden"
+                </select>
+                <input name="awal_jabat" type="date"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
+                    placeholder=" awal_jabat">
+                <input name="akhir_jabat" type="date"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
+                    placeholder=" akhir_jabat">
+                <input name="kecamatan" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" kecamatan" value="Muara Komam">
 
-                <input required name="kabupaten" type="hidden"
+                <input name="kabupaten" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" kabupaten" value="Paser">
-                <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md"> Tambah Nasabah
+                <button type=" submit" class="  bg-purple-600 px-2  py-2 mb-1 text-white rounded-md"> Tambah
+                    Nasabah
                 </button>
             </div>
         </form>
@@ -41,8 +43,8 @@
                         <tr class=" text-left uppercase">
                             <th class=" px-2 py-2 rounded-md">#</th>
                             <th class=" px-1">Kordes</th>
-                            <th class=" px-1">JK</th>
-                            <th class=" px-1">Alamat</th>
+                            <th class=" px-1">Jabatan Awal</th>
+                            <th class=" px-1">Jabatan Akhir</th>
                             <th class=" px-1  text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -50,9 +52,9 @@
                         @foreach( $kordes as $nas)
                         <tr class=" border border-bottom ">
                             <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
-                            <td class=" px-1">{{$nas->nama_kordes}}</td>
-                            <td class=" px-1">{{$nas->jenis_kelamin}}</td>
-                            <td>{{$nas->alamat}}</td>
+                            <td class=" px-1">{{$nas->nasabah_id}}</td>
+                            <td class=" px-1">{{$nas->awal_jabat}}</td>
+                            <td>{{$nas->akhir_jabat}}</td>
                             <td class=" text-center">
                                 <div class=" flex space-x-2  justify-center">
                                     <a href="/kordes/{{$nas->id}}">

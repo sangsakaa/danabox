@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kordes;
+use App\Models\Nasabah;
 use Illuminate\Http\Request;
 
 class KordesController extends Controller
@@ -14,8 +15,9 @@ class KordesController extends Controller
      */
     public function index()
     {
+        $nasabah = Nasabah::all();
         $kordes = Kordes::paginate(4);
-        return view('admin/kordes/kordes',['kordes'=>$kordes]);
+        return view('admin/kordes/kordes',['kordes'=>$kordes,'nasabah'=>$nasabah]);
     }
 
     /**
@@ -37,7 +39,9 @@ class KordesController extends Controller
     public function store(Request $request)
     {
         $kordes = new Kordes ;
-        $kordes->nama_kordes = $request->nama_kordes;
+        $kordes->nasabah_id = $request->nasabah_id;
+        $kordes->awal_jabat = $request->awal_jabat;
+        $kordes->akhir_jabat = $request->akhir_jabat;
         $kordes->save();
         return redirect()->back();
     }
