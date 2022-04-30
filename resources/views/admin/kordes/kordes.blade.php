@@ -40,11 +40,12 @@
             <div class=" grid grid-cols-1  overflow-x-auto w-full">
                 <table class="  w-full whitespace-no-wrap table table-auto  border rounded-md ">
                     <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
-                        <tr class=" text-left uppercase">
+                        <tr class=" sm:uppercase  text-left capitalize ">
                             <th class=" px-2 py-2 rounded-md">#</th>
                             <th class=" px-1">Kordes</th>
                             <th class=" px-1">Jabatan Awal</th>
                             <th class=" px-1">Jabatan Akhir</th>
+                            <th class=" px-1">Masa Jabatan</th>
                             <th class=" px-1  text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -54,7 +55,8 @@
                             <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
                             <td class=" px-1">{{$nas->nasabah_id}}</td>
                             <td class=" px-1">{{$nas->awal_jabat}}</td>
-                            <td>{{$nas->akhir_jabat}}</td>
+                            <td class=" px-1">{{$nas->akhir_jabat}}</td>
+                            <td>{{$nas->khitmad.' tahun'}}</td>
                             <td class=" text-center">
                                 <div class=" flex space-x-2  justify-center">
                                     <a href="/kordes/{{$nas->id}}">

@@ -23,7 +23,7 @@
                 </select>
                 <input name="kordes_id" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
-                    placeholder=" kordes_id" value="1">
+                    placeholder=" kordes_id" value="21">
                 <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
@@ -45,6 +45,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if($penyetor->count())
                     @foreach( $penyetor as $nas)
                     <tr class=" border border-bottom ">
                         <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
@@ -53,7 +54,7 @@
                         <td class=" px-1">{{$nas->setor->nama_nasabah}}</td>
                         <td class=" px-1">{{$nas->setor->alamat}}</td>
                         <td class=" px-1">{{$nas->setor->kecamatan}}</td>
-                        <td class=" px-1">{{$nas->kordes->nama_kordes}}</td>
+                        <td class=" px-1">{{$nas->kordes->nasabah_id}}</td>
                         </td>
                         <td class=" text-center">
                             <div class=" flex">
@@ -85,11 +86,16 @@
                                     </a>
                                 </div>
                             </div>
+                            @endforeach
                         </td>
-
                     </tr>
-                    @endforeach
-
+                    @else
+                    <tr class="  w-full">
+                        <td class=" text-1xl py-1 text-red-600">
+                            Belum ada Data Setoran
+                        </td>
+                    </tr>
+                    @endif
                 </tbody>
             </table>
         </div>

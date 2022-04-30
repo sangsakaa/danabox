@@ -14,23 +14,23 @@
         <form action="/setor" method="post">
             @csrf
             <div class=" flex gap-2 grid-cols-1 ">
-                <input name="tgl_setor" type="date"
+                <input required name="tgl_setor" type="date"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
-                <input name="penyetor_id" type="hidden"
+                <input required name="penyetor_id" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
                     placeholder=" penyetor_id" value="{{$penyetor->id}}">
-                <select name="nasabah_id" id=""
+                <select required name="nasabah_id" id=""
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Nasabah</option>
                     @foreach( $nasabah as $nasabah)
                     <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
                     @endforeach
                 </select>
-                <input name="setor_box" type="text"
+                <input required name="setor_box" type="text"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_box" value="">
-                <input name="setor_sp" type="text"
+                <input required name="setor_sp" type="text"
                     class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_sp">
                 <button type=" submit" class="  bg-purple-600 px-2 py-1 mb-1 text-white rounded-md"> <svg
