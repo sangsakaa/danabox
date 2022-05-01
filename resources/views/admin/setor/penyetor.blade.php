@@ -36,7 +36,7 @@
         <div class=" overflow-auto  text-sm rounded-lg ">
             <table class="w-full whitespace-no-wrap table table-auto    ">
                 <thead class=" border  shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-lg mb-1 text-purple-600 ">
-                    <tr class=" text-sm sm:text-2 text-left  sm:uppercase">
+                    <tr class=" text-sm sm:text-2 text-left lowercase  sm:uppercase">
                         <th class=" px-2 py-2 rounded-md">#</th>
                         <th class=" px-1">Tgl Setoran</th>
                         <th class=" px-1">Bulan</th>
@@ -44,7 +44,6 @@
                         <th class=" px-1">Alamat</th>
                         <th class=" px-1">kecamatan</th>
                         <th class=" px-1">Kordes</th>
-
                         <th class=" px-1  text-center">Aksi</th>
                     </tr>
                 </thead>

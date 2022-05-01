@@ -12,7 +12,7 @@
             </div>
         </div>
     </x-slot>
-    <div class=" p-2 overflow-hidden  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+    <div class=" p-2 overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/setor" method="post">
             @csrf
             <div class=" grid gap-2 grid-cols-1 sm:grid-cols-5  ">
@@ -43,14 +43,14 @@
         <div class=" mt-4 overflow-auto  text-sm rounded-lg ">
             <table class=" table table-auto w-full border rounded-md ">
                 <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
-                    <tr class=" text-left uppercase">
+                    <tr class=" text-left capitalize sm:uppercase">
                         <th class=" px-2 py-2 rounded-md">#</th>
-                        <th class=" px-1">Tgl Setor</th>
-                        <th class=" px-1">Nasabah</th>
-                        <th class=" px-1 text-center"> Dana Box</th>
-                        <th class=" px-1">SP</th>
-                        <th class=" px-1 text-left "> Total Setor</th>
-                        <th class=" px-1  ">Aksi</th>
+                        <th class=" px-2 py-2">Tgl Setor</th>
+                        <th class=" px-2 py-2">Nasabah</th>
+                        <th class=" px-2 py-2 text-center"> Dana Box</th>
+                        <th class=" px-2 py-2">SP</th>
+                        <th class=" px-2 py-2 text-left "> Total Setor</th>
+                        <th class=" px-2 py-2  ">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
