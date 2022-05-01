@@ -15,7 +15,7 @@
     <div class=" p-2 overflow-hidden  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/setor" method="post">
             @csrf
-            <div class=" grid gap-2 grid-cols-1 sm:grid-cols-4  ">
+            <div class=" grid gap-2 grid-cols-1 sm:grid-cols-5  ">
                 <input required name="tgl_setor" type="date"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
