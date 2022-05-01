@@ -12,23 +12,23 @@
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <input name="tgl_setor" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah" required>
                 <select name="nasabah_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Penyetor</option>
                     @foreach( $nasabah as $nasabah)
                     <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
                     @endforeach
                 </select>
                 <select required name="kordes_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-1 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Kordes</option>
                     @foreach( $kordes as $kordes)
                     <option value="{{$kordes->id}}">{{$kordes->nasabah_id}}</option>
                     @endforeach
                 </select>
-                <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md">
+                <button type=" submit" class="  bg-purple-600 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
             </div>
