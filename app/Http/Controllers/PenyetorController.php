@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kordes;
 use App\Models\Setor;
 use App\Models\Nasabah;
 use App\Models\Penyetor;
@@ -20,7 +21,8 @@ class PenyetorController extends Controller
         $setor = Setor::paginate(2);
         $penyetor = Penyetor::all();
         $nasabah = Nasabah::all();
-        return view('admin/setor/penyetor',['penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah]);
+        $kordes = Kordes::all();
+        return view('admin/setor/penyetor',['kordes'=>$kordes,'penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah]);
     }
 
     /**
@@ -60,7 +62,8 @@ class PenyetorController extends Controller
         $nasabah = Nasabah::all();
         $setor = Setor::where('penyetor_id',$penyetor->id)->get();
         $datapenyetor = Penyetor::all();
-        return view('admin/setor/detailsetor',['penyetor'=>$penyetor,'nasabah'=>$nasabah,'setor'=>$setor,'datapenyetor'=>$datapenyetor]);
+        $kordes = Kordes::all();
+        return view('admin/setor/detailsetor',['kordes'=>$kordes,'penyetor'=>$penyetor,'nasabah'=>$nasabah,'setor'=>$setor,'datapenyetor'=>$datapenyetor]);
     }
 
     /**

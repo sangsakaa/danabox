@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kordes;
 use App\Models\Nasabah;
 use App\Models\Penyetor;
 use App\Models\Setor;
@@ -21,7 +22,8 @@ class SetorController extends Controller
         $setor = Setor::all();
         $penyetor = Penyetor::all();
         $nasabah = Nasabah::all();
-        return view('admin/setor/penyetor',['penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah]);
+        $kordes = Kordes::all();
+        return view('admin/setor/penyetor',['penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah,'kordes'=>$kordes]);
     }
 
     /**

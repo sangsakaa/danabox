@@ -1036,6 +1036,9 @@ select {
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -1218,6 +1221,10 @@ select {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
@@ -2020,6 +2027,11 @@ select {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .sm\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+  }
+
   .sm\:p-6 {
     padding: 1.5rem;
   }
@@ -2048,6 +2060,11 @@ select {
     padding-right: 0.5rem;
   }
 
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .sm\:pt-0 {
     padding-top: 0px;
   }
@@ -2063,6 +2080,15 @@ select {
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .sm\:font-semibold {
+    font-weight: 600;
   }
 
   .sm\:uppercase {

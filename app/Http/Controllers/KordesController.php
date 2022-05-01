@@ -54,7 +54,7 @@ class KordesController extends Controller
      */
     public function show(Kordes $kordes)
     {
-        //
+        return view('admin/kordes/detailkordes',['kordes'=>$kordes]);
     }
 
     /**
