@@ -5,7 +5,7 @@
                 {{ __('Detail Nasabah') }}
             </h2>
             <x-button href="/nasabah" variant="black" class="justify-center max-w-xs gap-2 ">
-                <x-icons.github class="w-6 h-6" aria-hidden="true" />
+                <x-icons.usergroup class="w-6 h-6" aria-hidden="true" />
                 <span>Star on Github</span>
             </x-button>
         </div>

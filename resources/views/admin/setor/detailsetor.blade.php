@@ -4,9 +4,9 @@
             <h2 class="  text-4xl sm:text-5xl text-purple-600 font-semibold leading-tight">
                 {{ __('Data Penyetor') }}
             </h2>
-            <div class=" grid grid-cols-1 pl-6 py-2">
+            <div class=" grid grid-cols-1 p-2 py-2">
                 <x-button href="/penyetor" variant="purple" class="justify-center max-w-xs gap-2">
-                    <x-icons.github class="w-6 h-6" aria-hidden="true" />
+                    <x-icons.twitter class="w-6 h-6" aria-hidden="true" />
                     <span>Kembali ke menu setor</span>
                 </x-button>
             </div>
@@ -19,7 +19,7 @@
                 <input required name="tgl_setor" type="date"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
-                <input required name="penyetor_id" type="text"
+                <input required name="penyetor_id" type="hidden"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" penyetor_id" value="{{$penyetor->id}}" readonly>
                 <select required name="nasabah_id" id=""
