@@ -15,13 +15,13 @@
     <div class=" p-2 overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/setor" method="post">
             @csrf
-            <div class=" grid gap-2 grid-cols-1 sm:grid-cols-5  ">
+            <div class=" grid gap-2 grid-cols-1 sm:grid-cols-6  ">
                 <input required name="tgl_setor" type="date"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
-                <input required name="penyetor_id" type="hidden"
+                <input required name="penyetor_id" type="text"
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
-                    placeholder=" penyetor_id" value="{{$penyetor->id}}">
+                    placeholder=" penyetor_id" value="{{$penyetor->id}}" readonly>
                 <select required name="nasabah_id" id=""
                     class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Nasabah</option>
