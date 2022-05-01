@@ -28,9 +28,6 @@
                     <option value="{{$kordes->id}}">{{$kordes->nasabah_id}}</option>
                     @endforeach
                 </select>
-                <input name="kordes_id" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
-                    placeholder=" kordes_id" value="21">
                 <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
