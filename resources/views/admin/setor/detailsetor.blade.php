@@ -16,28 +16,30 @@
         <form action="/setor" method="post">
             @csrf
 
-            <input required name="tgl_setor" type="date"
-                class="bg-white shadow-md dark:bg-dark-eval-1   px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
-                placeholder=" nasabah">
-            <input required name="penyetor_id" type="hidden"
-                class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
-                placeholder=" penyetor_id" value="{{$penyetor->id}}" readonly>
-            <select required name="nasabah_id" id=""
-                class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800">
-                <option value="">Pilih Nasabah</option>
-                @foreach( $nasabah as $nasabah)
-                <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
-                @endforeach
-            </select>
-            <input required name="setor_box" type="text"
-                class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
-                placeholder=" setor_box" value="">
-            <input required name="setor_sp" type="text"
-                class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
-                placeholder=" setor_sp">
-            <button type=" submit" class="  bg-green-800 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
-                Penyetor
-            </button>
+            <div class=" grid grid-cols-1 sm:grid-cols-5 gap-1`">
+                <input required name="tgl_setor" type="date"
+                    class="bg-white shadow-md dark:bg-dark-eval-1   px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    placeholder=" nasabah">
+                <input required name="penyetor_id" type="hidden"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    placeholder=" penyetor_id" value="{{$penyetor->id}}" readonly>
+                <select required name="nasabah_id" id=""
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800">
+                    <option value="">Pilih Nasabah</option>
+                    @foreach( $nasabah as $nasabah)
+                    <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
+                    @endforeach
+                </select>
+                <input required name="setor_box" type="text"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    placeholder=" setor_box" value="">
+                <input required name="setor_sp" type="text"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    placeholder=" setor_sp">
+                <button type=" submit" class="  bg-green-800 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
+                    Penyetor
+                </button>
+            </div>
 
         </form>
         <div class=" mt-4 overflow-auto  text-sm rounded-lg ">

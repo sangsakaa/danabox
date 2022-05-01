@@ -14,7 +14,7 @@
             rel="stylesheet" />
 
         <!-- Styles -->
-        <script src="https://cdn.tailwindcss.com"></script>
+
         <style>
         [x-cloak] {
             display: none;
