@@ -12,26 +12,26 @@
                 @csrf
                 <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                     <input required value="{{ old('nama_nasabah') }}" name="nama_nasabah" type="text"
-                        class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-2 rounded-md mb-1 text-purple-600"
+                        class="  capitalize bg-white shadow-md dark:bg-dark-eval-1 grid grid-cols-1 w-full sm:grid-cols-3  sm:w-full   px-1 py-2 rounded-md mb-1 text-green-800"
                         placeholder=" nasabah">
                     <select required name="jenis_kelamin" id=""
-                        class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600">
+                        class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-green-800">
                         <option value="">Pilih Jenis Kelamin</option>
                         <option value="L">Laki Laki</option>
                         <option value="P">Perempuan</option>
                     </select>
                     <input required name="alamat" type="text"
-                        class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
+                        class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-green-800"
                         placeholder=" alamat">
 
                     <input required name="kecamatan" type="hidden"
-                        class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
+                        class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-green-800"
                         placeholder=" kecamatan" value="Muara Komam">
 
                     <input required name="kabupaten" type="hidden"
-                        class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
+                        class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-green-800"
                         placeholder=" kabupaten" value="Paser">
-                    <button type=" submit" class="  bg-purple-600 px-2 py-2 mb-1 text-white rounded-md"> Tambah Nasabah
+                    <button type=" submit" class="  bg-green-800 px-2 py-2 mb-1 text-white rounded-md"> Tambah Nasabah
                     </button>
                 </div>
             </form>
@@ -39,7 +39,7 @@
                 <div class=" grid grid-cols-1  overflow-x-auto w-full">
                     <table class="  w-full whitespace-no-wrap table table-auto  border rounded-md ">
                         <thead
-                            class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
+                            class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-green-800 ">
                             <tr class=" text-left uppercase">
                                 <th class=" px-2 py-2 rounded-md">#</th>
                                 <th class=" px-1">Nasabah</th>

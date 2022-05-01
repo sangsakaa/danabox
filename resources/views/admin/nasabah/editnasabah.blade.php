@@ -16,10 +16,10 @@
             @method('patch')
             <div class=" flex gap-2 grid-cols-1 ">
                 <input name="nama_nasabah" type="text"
-                    class=" capitalize bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-purple-600"
+                    class=" capitalize bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-green-800"
                     placeholder=" nasabah" value="{{$nasabah->nama_nasabah}}">
                 <select name="jenis_kelamin" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-green-800">
                     <option value="">Pilih Jenis Kelamin</option>
                     <option {{old('jenis_kelamin',$nasabah->jenis_kelamin)=="L"? 'selected':''}} value="L">
                         Laki-Laki</option>
@@ -27,16 +27,16 @@
                         Perempuan</option>
                 </select>
                 <input name="alamat" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-green-800"
                     placeholder=" alamat" value="{{$nasabah->alamat}}">
                 <input name="kecamatan" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-green-800"
                     placeholder=" kecamatan" value="Muara Komam">
 
                 <input name="kabupaten" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-2 py-1 rounded-md mb-1 text-green-800"
                     placeholder=" kabupaten" value="Paser">
-                <button type=" submit" class="  bg-purple-600 px-2 py-1 mb-1 text-white rounded-md">
+                <button type=" submit" class="  bg-green-800 px-2 py-1 mb-1 text-white rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-arrow-left-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"

@@ -11,7 +11,7 @@
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <select required name="nasabah_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-green-800">
                     <option value="">Pilih Nasabah </option>
                     @foreach ($nasabah as $nasabah)
                     <option value="{{$nasabah->nama_nasabah}}">{{$nasabah->nama_nasabah}}</option>
@@ -19,19 +19,19 @@
 
                 </select>
                 <input name="awal_jabat" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-green-800"
                     placeholder=" awal_jabat">
                 <input name="akhir_jabat" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-green-800"
                     placeholder=" akhir_jabat">
                 <input name="kecamatan" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-green-800"
                     placeholder=" kecamatan" value="Muara Komam">
 
                 <input name="kabupaten" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-green-800"
                     placeholder=" kabupaten" value="Paser">
-                <button type=" submit" class="  bg-purple-600 px-2  py-2 mb-1 text-white rounded-md"> Tambah
+                <button type=" submit" class="  bg-green-800 px-2  py-2 mb-1 text-white rounded-md"> Tambah
                     Nasabah
                 </button>
             </div>
@@ -39,7 +39,7 @@
         <div class="overflow-hidden mb-2 w-full rounded-lg border shadow-xs">
             <div class=" grid grid-cols-1  overflow-x-auto w-full">
                 <table class="  w-full whitespace-no-wrap table table-auto  border rounded-md ">
-                    <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
+                    <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-green-800 ">
                         <tr class=" sm:uppercase  text-left capitalize ">
                             <th class=" px-2 py-2 rounded-md">#</th>
                             <th class=" px-1">Kordes</th>
