@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="text-xl sm:px-2 px-2 font-semibold leading-tight">
+            <h2 class="  sm:px-2 px-2 font-semibold leading-tight">
                 {{ __('Data Koordinator Desa') }}
             </h2>
         </div>
