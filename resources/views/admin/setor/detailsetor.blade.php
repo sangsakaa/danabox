@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col grid-cols-1 md:px-4 gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="  text-4xl sm:text-5xl text-green-800 font-semibold leading-tight">
+            <h2 class="  text-4xl sm:text-5xl text-purple-600 font-semibold leading-tight">
                 {{ __('Data Penyetor') }}
             </h2>
             <div class=" grid grid-cols-1 px-6 sm:px-6 p-2 py-2">
@@ -16,27 +16,27 @@
         <form action="/setor" method="post">
             @csrf
 
-            <div class=" grid grid-cols-1 sm:grid-cols-5 gap-1`">
+            <div class=" grid grid-cols-1 sm:grid-cols-5 gap-1">
                 <input required name="tgl_setor" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1   px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    class="bg-white shadow-md dark:bg-dark-eval-1   px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
                 <input required name="penyetor_id" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" penyetor_id" value="{{$penyetor->id}}" readonly>
                 <select required name="nasabah_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Nasabah</option>
                     @foreach( $nasabah as $nasabah)
                     <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
                     @endforeach
                 </select>
                 <input required name="setor_box" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_box" value="">
                 <input required name="setor_sp" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_sp">
-                <button type=" submit" class="  bg-green-800 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
+                <button type=" submit" class="  bg-purple-600 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
             </div>
@@ -44,7 +44,7 @@
         </form>
         <div class=" mt-4 overflow-auto  text-sm rounded-lg ">
             <table class=" table table-auto w-full border rounded-md ">
-                <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-green-800 ">
+                <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
                     <tr class=" text-left capitalize sm:uppercase">
                         <th class=" px-2 py-2 rounded-md">#</th>
                         <th class=" px-2 py-2">Tgl Setor</th>
@@ -57,7 +57,7 @@
                 </thead>
                 <tbody>
                     @foreach( $setor as $nas)
-                    <tr class=" border border-bottom hover:bg-gray-100 dark:text-green-800   ">
+                    <tr class=" border border-bottom hover:bg-gray-100 dark:text-purple-600   ">
                         <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
                         <td class=" px-1">{{$nas->tgl_setor}}</td>
                         <td class=" px-1">{{$nas->nasabah->nama_nasabah}}</td>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class=" flex ml-2">
                                     <a href="/setor/{{$nas->id}}">
-                                        <button class=" bg-green-800 text-white rounded-sm px-1 py-1">
+                                        <button class=" bg-purple-600 text-white rounded-sm px-1 py-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                                 <path

@@ -11,7 +11,7 @@
         </div>
     </x-slot>
     <div
-        class=" font-semibold text-3xl text-green-800 px-6 p-2 mb-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+        class=" font-semibold text-3xl text-purple-600 px-6 p-2 mb-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         Detail Data Nasabah
     </div>
     <div class="p-6 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
@@ -27,12 +27,12 @@
     </div>
 
     <div
-        class=" font-semibold text-3xl text-green-800 px-6 p-2 mt-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+        class=" font-semibold text-3xl text-purple-600 px-6 p-2 mt-2 overflow-hidden grid sm:grid-cols-1  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
         Detail Setoran
     </div>
     <div class="p-2 mt-2 overflow-auto grid sm:grid-cols-1  bg-white  rounded-lg shadow-lg dark:bg-dark-eval-1">
         <table class=" table table-auto w-full border rounded-md ">
-            <thead class=" bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-green-800 ">
+            <thead class=" bg-white shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-md mb-1 text-purple-600 ">
                 <tr class=" text-left uppercase">
                     <th class=" px-2 py-2 rounded-md">#</th>
                     <th class=" px-1">Tgl Setor</th>

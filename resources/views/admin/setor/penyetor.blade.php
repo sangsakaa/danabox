@@ -12,30 +12,30 @@
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <input name="tgl_setor" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah" required>
                 <select name="nasabah_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Penyetor</option>
                     @foreach( $nasabah as $nasabah)
                     <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
                     @endforeach
                 </select>
                 <select required name="kordes_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 sm:py-2 rounded-md mb-1 text-green-800">
+                    class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Kordes</option>
                     @foreach( $kordes as $kordes)
                     <option value="{{$kordes->id}}">{{$kordes->nasabah_id}}</option>
                     @endforeach
                 </select>
-                <button type=" submit" class="  bg-green-800 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
+                <button type=" submit" class="  bg-purple-600 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
             </div>
         </form>
         <div class=" overflow-auto  text-sm rounded-lg ">
             <table class="w-full whitespace-no-wrap table table-auto    ">
-                <thead class=" border  shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-lg mb-1 text-green-800 ">
+                <thead class=" border  shadow-md dark:bg-dark-eval-1 w-1/4 px-1 py-1 rounded-lg mb-1 text-purple-600 ">
                     <tr class=" text-sm sm:text-2 text-left lowercase  sm:uppercase">
                         <th class=" px-2 py-2 rounded-md">#</th>
                         <th class=" px-1">Tgl Setoran</th>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class=" flex ml-2">
                                     <a href="/penyetor/{{$nas->id}}">
-                                        <button class=" bg-green-800 text-white rounded-sm px-1 py-1">
+                                        <button class=" bg-purple-600 text-white rounded-sm px-1 py-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                                 <path
