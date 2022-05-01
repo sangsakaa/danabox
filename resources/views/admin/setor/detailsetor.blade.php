@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col grid-cols-1 md:px-4 gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="  text-5xl text-purple-600 font-semibold leading-tight">
-                {{ __('Data Nasabah') }}
+            <h2 class="  text-4xl sm:text-5xl text-purple-600 font-semibold leading-tight">
+                {{ __('Data Penyetor') }}
             </h2>
             <div class=" grid grid-cols-1 pl-6 py-2">
                 <x-button href="/penyetor" variant="purple" class="justify-center max-w-xs gap-2">
@@ -17,30 +17,30 @@
             @csrf
             <div class=" grid gap-2 grid-cols-1 sm:grid-cols-5  ">
                 <input required name="tgl_setor" type="date"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" nasabah">
                 <input required name="penyetor_id" type="hidden"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" penyetor_id" value="{{$penyetor->id}}">
                 <select required name="nasabah_id" id=""
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600">
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600">
                     <option value="">Pilih Nasabah</option>
                     @foreach( $nasabah as $nasabah)
                     <option value="{{$nasabah->id}}">{{$nasabah->nama_nasabah}}</option>
                     @endforeach
                 </select>
                 <input required name="setor_box" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_box" value="">
                 <input required name="setor_sp" type="text"
-                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 rounded-md mb-1 text-purple-600"
+                    class="bg-white shadow-md dark:bg-dark-eval-1  px-1 py-2 sm:py-2 rounded-md mb-1 text-purple-600"
                     placeholder=" setor_sp">
-                <button type=" submit" class="  bg-purple-600 px-2 py-1 mb-1 text-white rounded-md">
+                <button type=" submit" class="  bg-purple-600 px-2 py-2 sm:py-2 mb-1 text-white rounded-md">
                     Penyetor
                 </button>
             </div>
         </form>
-        <div class=" p-4 overflow-auto  text-sm rounded-lg ">
+        <div class=" mt-4 overflow-auto  text-sm rounded-lg ">
             <table class=" table table-auto w-full border rounded-md ">
                 <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
                     <tr class=" text-left uppercase">
