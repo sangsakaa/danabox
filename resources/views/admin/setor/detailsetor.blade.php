@@ -137,7 +137,7 @@
             <div class="px-4 font-semibold  "> :
                 {{ 'Rp.'.number_format(($setor->sum('setor_sp')-$setor->sum('setor_sp')*15/100),0,',','.')}}
             </div>
-            <div class="   text-red-600">Total Kas Kabupate</div>
+            <div class="   text-red-600">Total Kas Kabupaten</div>
             <div class="px-4 font-semibold   text-red-600"> :
                 {{'Rp.'.number_format(($setor->sum('setor_box') - $setor->sum('setor_box')*15/100)+($setor->sum('setor_sp')-$setor->sum('setor_sp')*15/100),0,',','.')}}
             </div>

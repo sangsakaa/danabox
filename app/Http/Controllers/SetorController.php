@@ -61,9 +61,11 @@ class SetorController extends Controller
      * @param  \App\Models\Setor  $setor
      * @return \Illuminate\Http\Response
      */
-    public function show(Setor $setor)
+    public function show(Setor $setor ,Penyetor $penyetor)
     {
-        // return view('admin/setor/penyetor',['setor'=>$setor]);
+        $nasabah = Nasabah::all();
+        $datapenyetor = Penyetor::all();
+        return view('admin/setor/detailpenyetor',['penyetor'=>$penyetor,'setor'=>$setor,'nasabah'=>$nasabah,'dataPenyetor'=>$datapenyetor]);
     }
 
     /**
