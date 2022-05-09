@@ -8,6 +8,7 @@
         </div>
     </x-slot>
     <div class="p-6 sm:text-sm overflow-hidden w-full  bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
+        <div class=" text-right">Kode Transaksi : {{ $setor->tgl_setor }}-{{$setor->id}}</div>
         <div class=" grid grid-cols-2">
             <div>Tanggal Setor</div>
             <div> : {{ $setor->tgl_setor }}</div>

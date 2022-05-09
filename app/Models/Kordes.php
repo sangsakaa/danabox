@@ -27,4 +27,5 @@ class Kordes extends Model
         $tanggal_keluar = new Carbon($this->akhir_jabat);
         return  $tanggal_masuk->diff($tanggal_keluar)->y;
     }
+    
 }

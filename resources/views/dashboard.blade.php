@@ -29,6 +29,36 @@
                     </div>
                 </div>
             </div>
+            <div class=" bg-purple-600 rounded-md">
+                <div class=" grid sm:grid-cols-1 grid-cols-1 ">
+                    <div class=" px-2 grid grid-cols-1  sm:mt-10 text-white ">
+                        <div class="text-2xl text-center sm:text-center sm:text-3xl ">
+                            {{'Rp.'.number_format(($sp),0,',','.')}}
+                        </div>
+                        <span class=" fixed-bottom text-center">KAS SUMBANGAN PENDAPATAN</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" bg-purple-600 rounded-md">
+                <div class=" grid sm:grid-cols-1 grid-cols-1 ">
+                    <div class=" px-2 grid grid-cols-1  sm:mt-10 text-white ">
+                        <div class="text-2xl text-center sm:text-center sm:text-3xl ">
+                            {{'Rp.'.number_format(($box),0,',','.')}}
+                        </div>
+                        <span class=" fixed-bottom text-center">KAS DANABOX</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" bg-purple-600 rounded-md">
+                <div class=" grid sm:grid-cols-1 grid-cols-1 ">
+                    <div class=" px-2 grid grid-cols-1  sm:mt-10 text-white ">
+                        <div class=" text-2xl text-center sm:text-center sm:text-3xl ">
+                            {{'Rp.'.number_format((($box))+(($sp)),0,',','.')}}
+                        </div>
+                        <span class=" fixed-bottom text-center">KAS KECAMATAN</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
 </x-app-layout>

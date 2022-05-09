@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
 use App\Models\Nasabah;
+use App\Models\Setor;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -17,7 +18,9 @@ class DashboardController extends Controller
     public function index()
     {
         $user = Nasabah::count();
-        return view('dashboard',['user'=>$user]);
+        $box = Setor::sum('setor_box')*15/100;
+        $sp = Setor::sum('setor_sp')*15/100;
+        return view('dashboard',['user'=>$user,'box'=>$box,'sp'=>$sp]);
     }
 
     /**
