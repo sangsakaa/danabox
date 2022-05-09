@@ -16,10 +16,8 @@
             <div>Nama Lengkap</div>
             <div class=" font-semibold ">: {{ $kordes->nasabah_id }}</div>
             <div>Tanggal Awal Jabatan</div>
-            <div class=" font-semibold ">: {{ $kordes->awal_jabat }}</div>
-            <div>Tanggal Akhir Jabatan</div>
-            <div class=" font-semibold ">: {{ $kordes->akhir_jabat }}</div>
-            <div>Tanggal Akhir Jabatan</div>
+            <div class=" font-semibold ">: {{ $kordes->awal_jabat }}/{{ $kordes->akhir_jabat }}</div>
+            <div>Masa Jabatan</div>
             <div class=" font-semibold ">: {{ $kordes->khitmad }} Tahun</div>
         </div>
     </div>

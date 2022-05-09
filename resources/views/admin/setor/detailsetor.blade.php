@@ -49,6 +49,7 @@
                         <th class=" px-2 py-2 rounded-md">#</th>
                         <th class=" px-2 py-2">Tgl Setor</th>
                         <th class=" px-2 py-2">Nasabah</th>
+                        <th class=" px-2 py-2">Alamat</th>
                         <th class=" px-2 py-2 text-center"> Dana Box</th>
                         <th class=" px-2 py-2">SP</th>
                         <th class=" px-2 py-2 text-left "> Total Setor</th>
@@ -61,6 +62,7 @@
                         <td class=" px-2 py-2 ">{{$loop->iteration}}</td>
                         <td class=" px-1">{{$nas->tgl_setor}}</td>
                         <td class=" px-1">{{$nas->nasabah->nama_nasabah}}</td>
+                        <td class=" px-1">{{$nas->nasabah->alamat}}</td>
                         <td class=" text-center">{{"Rp.".number_format($nas->setor_box,0,',','.')}}</td>
                         <td>{{"Rp.".number_format($nas->setor_sp,0,',','.')}}</td>
                         <td class=" text-left ">
