@@ -5,6 +5,7 @@ use App\Http\Controllers\KordesController;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\PenyetorController;
 use App\Http\Controllers\SetorController;
+use App\Http\Controllers\SuratKeluarController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,4 +33,5 @@ Route::resource('dashboard', DashboardController::class)->middleware(['auth','ve
 Route::resource('kordes', KordesController::class)->middleware(['auth','verified'])->parameters(['kordes'=>'kordes']);
 
 
+Route::get('surat_keluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('surat_keluar');
 require __DIR__ . '/auth.php';
