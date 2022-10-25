@@ -34,4 +34,5 @@ Route::resource('kordes', KordesController::class)->middleware(['auth','verified
 
 
 Route::get('surat_keluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('surat_keluar');
+Route::post('surat_keluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('surat_keluar');
 require __DIR__ . '/auth.php';

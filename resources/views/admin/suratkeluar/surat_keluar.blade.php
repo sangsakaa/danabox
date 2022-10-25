@@ -10,14 +10,12 @@
         <form action="/kordes" method="post">
             @csrf
             <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
-                <select required name="nasabah_id" id="" class="bg-white shadow-md dark:bg-dark-eval-1  grid grid-cols-1 w-full sm:grid-cols-3  px-1 py-2 rounded-md mb-1 text-purple-600">
-                    <option value="">Pilih Nasabah </option>
-                </select>
-                <input name="awal_jabat" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" awal_jabat">
-                <input name="akhir_jabat" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" akhir_jabat">
-                <input name="kecamatan" type="hidden" class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" kecamatan" value="Muara Komam">
 
-                <input name="kabupaten" type="hidden" class="bg-white shadow-md dark:bg-dark-eval-1 w-full px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" kabupaten" value="Paser">
+                <input name="tanggal_keluar" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" awal_jabat">
+                <input name="akhir_jabat" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" akhir_jabat">
+
+
+
                 <button type=" submit" class="  bg-purple-600 px-2  py-2 mb-1 text-white rounded-md"> Tambah
                     Nasabah
                 </button>
