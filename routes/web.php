@@ -27,8 +27,8 @@ Route::get('/buttons/text-icon', function () {
 })->middleware(['auth'])->name('buttons.text-icon');
 
 Route::resource('dashboard', DashboardController::class)->middleware(['auth', 'verified']);
-Route::get('suratkeluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('surat_keluar');
-Route::get('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'show'])->middleware('auth')->name('surat_keluar');
-Route::post('suratkeluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('surat_keluar');
+Route::get('suratkeluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('suratkeluar');
+Route::get('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'show'])->middleware('auth')->name('suratkeluar');
+Route::post('suratkeluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('suratkeluar');
 Route::delete('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'destroy'])->middleware('auth');
 require __DIR__ . '/auth.php';
