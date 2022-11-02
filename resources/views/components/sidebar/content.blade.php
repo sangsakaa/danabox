@@ -10,7 +10,7 @@
 
 
     <div x-transition x-show="isSidebarOpen || isSidebarHovered" class="text-sm text-gray-500">Surat Keluar</div>
-    <x-sidebar.link title="Surat Keluar" href="{{ route('surat_keluar') }}" :isActive="request()->routeIs('surat_keluar')">
+    <x-sidebar.link title="Surat Keluar" href="{{ route('suratkeluar') }}" :isActive="request()->routeIs('suratkeluar')">
         <x-slot name="icon">
             <x-icons.cash class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
