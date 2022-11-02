@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', ' | Guru' )
     <x-slot name="header">
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
@@ -7,30 +8,27 @@
         </div>
     </x-slot>
     <div class="p-6 overflow-hidden grid w-full   bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
-        <form action="/kordes" method="post">
+        <form action="/surat_keluar" method="post">
             @csrf
-            <div class=" grid grid-cols-1 sm:grid-cols-4 gap-2">
-
-                <input name="tanggal_keluar" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" awal_jabat">
-                <input name="akhir_jabat" type="date" class="bg-white shadow-md dark:bg-dark-eval-1 px-1 py-2 rounded-md mb-1 text-purple-600" placeholder=" akhir_jabat">
-
-
-
-                <button type=" submit" class="  bg-purple-600 px-2  py-2 mb-1 text-white rounded-md"> Tambah
-                    Nasabah
+            <div class=" flex grid-cols-1 sm:grid-cols-5 gap-2">
+                <input type="date" name="tanggal_keluar" class=" border px-1 py-1 w-40" required>
+                <input type="text" name="nomor_surat" class=" border px-1 py-1" placeholder="nomor surat">
+                <input type="text" name="tujuan" class=" border px-1 py-1" placeholder="tujuan">
+                <input type="text" name="uraian" class=" border px-1 py-1" placeholder="uraian">
+                <button type=" submit" class=" bg-purple-600 text-white px-4"> Surat Keluar
                 </button>
             </div>
         </form>
         <div class="overflow-hidden mb-2 w-full rounded-lg border shadow-xs">
             <div class=" grid grid-cols-1  overflow-x-auto w-full">
-                <table class="  w-full whitespace-no-wrap table table-auto  border rounded-md ">
+                <table class=" mt-1  w-full whitespace-no-wrap table table-auto  border rounded-md ">
                     <thead class=" bg-white shadow-md dark:bg-dark-eval-1  px-1 py-1 rounded-md mb-1 text-purple-600 ">
                         <tr class=" sm:uppercase  text-left text-sm capitalize ">
                             <th class=" px-2 py-1 rounded-md">#</th>
                             <th class=" px-1">Tgl Keluar</th>
                             <th class=" px-1">nomor surat</th>
                             <th class=" px-1">uraian</th>
-                            <th class=" px-1">Masa Jabatan</th>
+                            <th class=" px-1">Tujuan Surat</th>
                             <th class=" px-1  text-center">Aksi</th>
                         </tr>
                     </thead>

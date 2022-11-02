@@ -839,14 +839,14 @@ select {
 .mb-2 {
   margin-bottom: 0.5rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .ml-auto {
   margin-left: auto;
 }
 .mt-\[-5px\] {
   margin-top: -5px;
-}
-.mt-1 {
-  margin-top: 0.25rem;
 }
 .block {
   display: block;
@@ -937,6 +937,9 @@ select {
 }
 .w-10 {
   width: 2.5rem;
+}
+.w-40 {
+  width: 10rem;
 }
 .w-\[2px\] {
   width: 2px;
