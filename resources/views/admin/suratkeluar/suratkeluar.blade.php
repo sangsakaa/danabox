@@ -8,7 +8,7 @@
         </div>
     </x-slot>
     <div class="p-6 overflow-hidden grid w-full   bg-white  rounded-md shadow-md dark:bg-dark-eval-1">
-        <form action="/surat_keluar" method="post">
+        <form action="/suratkeluar" method="post">
             @csrf
             <div class=" flex grid-cols-1 sm:grid-cols-5 gap-2">
                 <input type="date" name="tanggal_keluar" class=" border px-1 py-1 w-40" required>
