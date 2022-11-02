@@ -1346,10 +1346,6 @@ select {
   font-size: 6rem;
   line-height: 1;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1933,10 +1929,6 @@ select {
 }
 @media (min-width: 640px) {
 
-  .sm\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .sm\:ml-0 {
     margin-left: 0px;
   }
@@ -2046,10 +2038,6 @@ select {
     text-align: left;
   }
 
-  .sm\:text-center {
-    text-align: center;
-  }
-
   .sm\:text-right {
     text-align: right;
   }
@@ -2071,11 +2059,6 @@ select {
 
   .sm\:uppercase {
     text-transform: uppercase;
-  }
-
-  .sm\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 768px) {
