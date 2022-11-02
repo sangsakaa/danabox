@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\SuratKeluar;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class SuratKeluarController extends Controller
 {
     public function index()
     {
         $surat_keluar = SuratKeluar::all();
-        return view('admin/suratkeluar/surat_keluar', ['listSurat' => $surat_keluar]);
+        return view('admin/suratkeluar/suratkeluar', ['listSurat' => $surat_keluar]);
+    }
+    public function show(SuratKeluar $surat_keluar)
+    {
+        dd($surat_keluar);
     }
     public function store(Request $request)
     {
@@ -22,6 +27,11 @@ class SuratKeluarController extends Controller
         $surat_keluar->tujuan = $request->tujuan;
         $surat_keluar->save();
 
+        return redirect()->back();
+    }
+    public function destroy(SuratKeluar $suratkeluar)
+    {
+        SuratKeluar::destroy($suratkeluar->id);
         return redirect()->back();
     }
 }

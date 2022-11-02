@@ -26,13 +26,9 @@ Route::get('/buttons/text-icon', function () {
     return view('buttons-showcase.text-icon');
 })->middleware(['auth'])->name('buttons.text-icon');
 
-Route::resource('nasabah', NasabahController::class)->middleware(['auth']);
-Route::resource('setor', SetorController::class)->middleware(['auth']);
-Route::resource('penyetor', PenyetorController::class)->middleware(['auth']);
-Route::resource('dashboard', DashboardController::class)->middleware(['auth','verified']);
-Route::resource('kordes', KordesController::class)->middleware(['auth','verified'])->parameters(['kordes'=>'kordes']);
-
-
-Route::get('surat_keluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('surat_keluar');
-Route::post('surat_keluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('surat_keluar');
+Route::resource('dashboard', DashboardController::class)->middleware(['auth', 'verified']);
+Route::get('suratkeluar', [SuratKeluarController::class, 'index'])->middleware('auth')->name('surat_keluar');
+Route::get('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'show'])->middleware('auth')->name('surat_keluar');
+Route::post('suratkeluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('surat_keluar');
+Route::delete('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'destroy'])->middleware('auth');
 require __DIR__ . '/auth.php';
