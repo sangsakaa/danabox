@@ -14,6 +14,7 @@
     </x-slot>
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="/suratkeluar" method="post">
+            @csrf
             <input type="file" name="" id="">
             <button class=" bg-purple-600 px-2 py-1 text-white">Uploud File</button>
         </form>
