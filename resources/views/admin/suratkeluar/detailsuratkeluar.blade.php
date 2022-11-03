@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
-                {{ __('Dashboard') }}
+                {{ __('Uploud File') }}
             </h2>
             <div class=" grid grid-cols-1 px-6">
                 <x-button target="_blank" href="https://github.com/kamona-wd/kui-laravel-breeze" variant="black" class="justify-center max-w-xs gap-2">
@@ -13,8 +13,10 @@
         </div>
     </x-slot>
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-        <div class="grid grid-cols-1 gap-2 sm:grid-cols-4 ">
-        </div>
+        <form action="/suratkeluar" method="post">
+            <input type="file" name="" id="">
+            <button class=" bg-purple-600 px-2 py-1 text-white">Uploud File</button>
+        </form>
     </div>
 
 </x-app-layout>

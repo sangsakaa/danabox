@@ -13,9 +13,9 @@ class SuratKeluarController extends Controller
         $surat_keluar = SuratKeluar::all();
         return view('admin/suratkeluar/suratkeluar', ['listSurat' => $surat_keluar]);
     }
-    public function show(SuratKeluar $surat_keluar)
+    public function show(SuratKeluar $suratkeluar)
     {
-        dd($surat_keluar);
+        return view('admin/suratkeluar/detailsuratkeluar');
     }
     public function store(Request $request)
     {

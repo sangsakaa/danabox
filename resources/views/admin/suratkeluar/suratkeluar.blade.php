@@ -44,7 +44,7 @@
                     <tr class=" border border-bottom ">
                         <td class=" px-2 py-1 ">{{$loop->iteration}}</td>
                         <td class=" px-1">{{$surat->tanggal_keluar}}</td>
-                        <td class=" px-1">{{$surat->nomor_surat}}</td>
+                        <td class=" px-1"><a href="/suratkeluar/{{$surat->id}}">{{$surat->nomor_surat}}</a></td>
                         <td class=" px-1">{{$surat->uraian}}</td>
                         <td>{{$surat->tujuan}}</td>
                         <td class=" text-center">
