@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+        @section('title', ' | Surat Keluar' )
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Dashboard') }}
@@ -27,10 +28,10 @@
     </div>
     <div class=" text-sm sm:text-xs mt-1 p-2  bg-white  shadow-md dark:bg-dark-eval-1">
         <div class=" overflow-auto grid sm:grid-cols-1 grid-cols-1 ">
-            <table class=" w-full   ">
+            <table class=" w-full ">
                 <thead class=" bg-white shadow-md dark:bg-dark  px-1 py-1  mb-1 text-purple-600 ">
                     <tr class=" sm:uppercase  text-left text-sm capitalize ">
-                        <th class=" px-2 py-1">#</th>
+                        <th class=" px-2 py-1">No</th>
                         <th class=" px-1">Tgl Keluar</th>
                         <th class=" px-1">nomor surat</th>
                         <th class=" px-1">uraian</th>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'DANABOX') }}</title>
+    <!-- <title>{{ config('app.name', 'E-Surat') }}</title> -->
+    <title>E-surat @yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
@@ -40,13 +41,13 @@
 
                 <!-- Page Heading -->
                 <header>
-                    <div class="p-2 sm:p-4  sm:px-4  rounded-md">
+                    <div class="p-2 sm:p-2  sm:px-2  rounded-md">
                         {{ $header }}
                     </div>
                 </header>
 
                 <!-- Page Content -->
-                <main class="px-4 sm:px-4 flex-1">
+                <main class="px-2 sm:px-2 flex-1">
                     {{ $slot }}
                 </main>
 
