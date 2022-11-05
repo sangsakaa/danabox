@@ -12,8 +12,13 @@ class SuratKeluarController extends Controller
 {
     public function index()
     {
-        $surat_keluar = SuratKeluar::all();
-        return view('admin/suratkeluar/suratkeluar', ['listSurat' => $surat_keluar]);
+        $surat_keluar = SuratKeluar::query()->orderBy('perihal');
+        if (request('cari')) {
+            $surat_keluar->where('file', 'like', '%' . request('cari') . '%')
+                ->orWhere('uraian', 'like', '%' . request('cari') . '%')
+                ->orWhere('tujuan', 'like', '%' . request('cari') . '%');
+        }
+        return view('admin/suratkeluar/suratkeluar', ['listSurat' => $surat_keluar->get()]);
     }
     public function show(SuratKeluar $suratkeluar)
     {
