@@ -1,3 +1,3 @@
-<div class=" text-center text-green-900 text-3xl font-semibold ">
-    E-SURAT
+<div class=" text-center text-green-900 text-2xl font-semibold ">
+    E-S
 </div>

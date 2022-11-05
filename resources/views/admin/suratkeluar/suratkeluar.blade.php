@@ -37,16 +37,15 @@
     </div>
     <div class=" text-sm sm:text-xs mt-1 p-2  bg-white  shadow-md dark:bg-dark-eval-1">
         <form action="/suratkeluar" method="get" class="  gap-1">
-            <div class=" px-2 flex grid-cols-2 gap-2">
+            <div class=" flex grid-cols-2 gap-2">
                 <input type="text" name="cari" value="{{ request('cari') }}" class=" dark:bg-dark-bg border text-green-800 rounded-sm py-1  w-1/2 " placeholder=" Cari ...">
                 <button class=" bg-purple-600 px-4 py-1 text-white">Cari</button>
             </div>
-
         </form>
         <div class=" overflow-auto grid sm:grid-cols-1 grid-cols-1 ">
-            <table class=" w-full ">
+            <table class=" w-full mt-1 ">
                 <thead class=" bg-white shadow-md dark:bg-dark  px-1 py-1  mb-1 text-purple-600 ">
-                    <tr class=" sm:uppercase  text-left text-sm sm:text-xs capitalize ">
+                    <tr class=" text-left text-sm sm:text-xs capitalize border ">
                         <th class=" px-2 py-1">No</th>
                         <th class=" px-1">Tgl Keluar</th>
                         <th class=" px-1">nomor surat</th>
@@ -63,12 +62,11 @@
                         <td class=" px-2 py-1 ">{{$loop->iteration}}</td>
                         <td class=" px-1">{{$surat->tanggal_keluar}}</td>
                         <td class=" px-1"><a href="/suratkeluar/{{$surat->id}}">{{$surat->nomor_surat}}</a></td>
-                        <td class=" px-1">{{$surat->uraian}}</td>
-                        <td>{{$surat->tujuan}}</td>
+                        <td class=" px-1 capitalize">{{strtolower($surat->uraian)}}</td>
+                        <td class=" capitalize">{{strtolower($surat->tujuan)}}</td>
                         <td>{{$surat->perihal}}
-
                         </td>
-                        <td class=" text-center"><a type="button" class="btn btn-secondary bg-purple-600 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <td class=" text-center p-1"><a type="button" class="btn btn-secondary bg-purple-600 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
                             </a></td>
