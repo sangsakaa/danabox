@@ -14,15 +14,19 @@
     </x-slot>
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <div class="grid grid-cols-1 gap-2 sm:grid-cols-4 ">
-            <div class=" bg-purple-600 rounded-md">
+            <div class=" bg-orange-600 rounded-md">
                 <div class=" grid sm:grid-cols-2 grid-cols-2 ">
                     <div class=" px-4 grid grid-cols-1 text-white">
-                        <div class="py-4 text-8xl">{{$user}}</div>
+                        <div class="py-4 ">
+                            <span class=" text-sm">Surat Keluar</span>
+                            <p>{{$surat_keluar}}</p>
+                        </div>
                     </div>
-                    <div class=" px-4 sm:px-4 py-2 sm:py-2 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="110 " height=" 110 " fill="currentColor" class="bi bi-person-lines-fill text-white " viewBox="0 0 16 16">
-                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                    <div class=" px-4 sm:px-4 py-2 sm:py-2 mt-2 text-white text-right grid justify-items-end ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
                         </svg>
+
                     </div>
                 </div>
             </div>

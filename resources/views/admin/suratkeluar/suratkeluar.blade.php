@@ -20,7 +20,8 @@
                 <!-- <div class=" ">
                     <img class="img-preview  ">
                 </div> -->
-                <input type="date" name="tanggal_keluar" class="  border px-1 py-1 " required>
+                <input type="date" name="tanggal_keluar" class="  border px-1 py-1 " title="Tanggal Surat Keluar" required>
+
                 <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
                 <input type="text" name="tujuan" class=" capitalize border px-1 py-1" placeholder="tujuan">
                 <input type="text" name="uraian" class=" capitalize border px-1 py-1" placeholder="uraian">
@@ -52,7 +53,7 @@
                         <th class=" px-1">uraian</th>
                         <th class=" px-1">Tujuan Surat</th>
                         <th class=" px-1">Perihal</th>
-                        <th class=" px-1">Download</th>
+                        <th class=" px-1 text-center">Unduh File</th>
                         <th class=" px-1  text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -67,7 +68,7 @@
                         <td>{{$surat->perihal}}
 
                         </td>
-                        <td class="p-1 text-center"><a type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <td class=" text-center"><a type="button" class="btn btn-secondary bg-purple-600 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
                             </a></td>
