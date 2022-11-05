@@ -14,16 +14,24 @@
         </div>
     </x-slot>
     <div class="p-1 bg-white   shadow-md dark:bg-dark-eval-1">
-        <form action="/suratkeluar" method="post">
+        <form action="/suratkeluar" method="post" enctype="multipart/form-data">
             @csrf
-            <div class=" grid sm:grid grid-cols-1 sm:grid-cols-5 gap-2 capitalize">
+            <div class=" grid sm:grid-cols-2 grid-cols-1  gap-2 capitalize">
+                <!-- <div class=" ">
+                    <img class="img-preview  ">
+                </div> -->
                 <input type="date" name="tanggal_keluar" class="  border px-1 py-1 " required>
                 <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
                 <input type="text" name="tujuan" class=" capitalize border px-1 py-1" placeholder="tujuan">
                 <input type="text" name="uraian" class=" capitalize border px-1 py-1" placeholder="uraian">
+                <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
+                <input type="file" name="file" id="">
+                <!-- <input type="file" name="image" class="" onchange="previewImage()" id="image"> -->
                 <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Surat Keluar
                 </button>
+
             </div>
+
         </form>
     </div>
     <div class=" text-sm sm:text-xs mt-1 p-2  bg-white  shadow-md dark:bg-dark-eval-1">
@@ -36,17 +44,20 @@
                         <th class=" px-1">nomor surat</th>
                         <th class=" px-1">uraian</th>
                         <th class=" px-1">Tujuan Surat</th>
+                        <th class=" px-1">Perihal</th>
                         <th class=" px-1  text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach( $listSurat as $surat)
-                    <tr class=" border border-bottom ">
+                    <tr class=" border border-bottom text-xs sm:text-xs  hover:bg-gray-50 dark:bg-dark-bg ">
                         <td class=" px-2 py-1 ">{{$loop->iteration}}</td>
                         <td class=" px-1">{{$surat->tanggal_keluar}}</td>
                         <td class=" px-1"><a href="/suratkeluar/{{$surat->id}}">{{$surat->nomor_surat}}</a></td>
                         <td class=" px-1">{{$surat->uraian}}</td>
                         <td>{{$surat->tujuan}}</td>
+                        <td>{{$surat->perihal}}</td>
+                        <td><a href="{{url('/download',$surat->file)}}">Download</a></td>
                         <td class=" text-center">
                             <div class=" flex space-x-2  justify-center">
                                 <form action="/suratkeluar/{{$surat->id}}" method="post">
@@ -64,6 +75,19 @@
                 </tbody>
             </table>
         </div>
-
     </div>
+    <!-- <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+
+        }
+    </script> -->
 </x-app-layout>

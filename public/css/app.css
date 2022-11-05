@@ -1362,6 +1362,10 @@ select {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -1941,10 +1945,6 @@ select {
     display: flex;
   }
 
-  .sm\:grid {
-    display: grid;
-  }
-
   .sm\:hidden {
     display: none;
   }
@@ -2014,8 +2014,8 @@ select {
     padding: 1.5rem;
   }
 
-  .sm\:p-4 {
-    padding: 1rem;
+  .sm\:p-2 {
+    padding: 0.5rem;
   }
 
   .sm\:px-6 {
@@ -2063,6 +2063,11 @@ select {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   .sm\:uppercase {
