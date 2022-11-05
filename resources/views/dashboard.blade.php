@@ -14,7 +14,7 @@
     </x-slot>
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <div class="grid grid-cols-1 gap-2 sm:grid-cols-4 ">
-            <div class=" bg-orange-600 rounded-md">
+            <div class=" bg-purple-600 rounded-md">
                 <div class=" grid sm:grid-cols-2 grid-cols-2 ">
                     <div class=" px-4 grid grid-cols-1 text-white">
                         <div class="py-4 ">
