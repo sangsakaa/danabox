@@ -12,11 +12,16 @@
             </div>
         </div>
     </x-slot>
-
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-
-        <iframe height="1000px" width="1200" src="/assets/{{$suratkeluar->file}}" frameborder="0">file</iframe>
-
+        <div class=" grid grid-cols-2">
+            <div>Tanggal Surat Keluar</div>
+            <div> : {{$suratkeluar->tanggal_keluar}}</div>
+            <div>Tujuan Surat</div>
+            <div> : {{$suratkeluar->tujuan}}</div>
+        </div>
+    </div>
+    <div class=" mt-1 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
+        <iframe height="1000px" width="100%" src="/assets/{{$suratkeluar->file}}" frameborder="0">file</iframe>
     </div>
 
 </x-app-layout>
