@@ -83,6 +83,9 @@
                                 <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratkeluar/{{$surat->id}}">
                                     <p class=" py-1">Detail</p>
                                 </a>
+                                <a class=" bg-yellow-400 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratkeluar/{{$surat->id}}/edit">
+                                    <p class=" py-1">Edit</p>
+                                </a>
                             </div>
                         </td>
                     </tr>

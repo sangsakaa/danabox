@@ -33,4 +33,5 @@ Route::get('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'show'])-
 Route::post('suratkeluar', [SuratKeluarController::class, 'store'])->middleware('auth')->name('suratkeluar');
 Route::get('/download/{file}', [SuratKeluarController::class, 'download'])->middleware('auth');
 Route::delete('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'destroy'])->middleware('auth');
+Route::get('suratkeluar/{suratkeluar}/edit', [SuratKeluarController::class, 'edit']);
 require __DIR__ . '/auth.php';

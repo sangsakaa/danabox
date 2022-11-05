@@ -47,6 +47,17 @@ class SuratKeluarController extends Controller
         $data->save();
         return redirect()->back();
     }
+    public function edit(SuratKeluar $suratkeluar)
+    {
+
+        return view(
+            'admin/suratkeluar/editsuratkeluar',
+            [
+                'suratkeluar' => $suratkeluar,
+            ]
+        );
+        
+    }
     public function download(Request $request, $file)
     {
         return response()->download(public_path('assets/' . $file));
