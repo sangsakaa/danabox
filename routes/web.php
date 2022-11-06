@@ -1,12 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\KordesController;
-use App\Http\Controllers\NasabahController;
-use App\Http\Controllers\PenyetorController;
-use App\Http\Controllers\SetorController;
+
 use App\Http\Controllers\SuratKeluarController;
-use App\Models\SuratKeluar;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,4 +31,5 @@ Route::post('suratkeluar', [SuratKeluarController::class, 'store'])->middleware(
 Route::get('/download/{file}', [SuratKeluarController::class, 'download'])->middleware('auth');
 Route::delete('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'destroy'])->middleware('auth');
 Route::get('suratkeluar/{suratkeluar}/edit', [SuratKeluarController::class, 'edit']);
+Route::patch('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'update']);
 require __DIR__ . '/auth.php';

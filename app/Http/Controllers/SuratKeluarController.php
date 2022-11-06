@@ -6,7 +6,7 @@ use App\Models\SuratKeluar;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-
+use Nette\Utils\Random;
 
 class SuratKeluarController extends Controller
 {
@@ -62,6 +62,20 @@ class SuratKeluarController extends Controller
     {
         return response()->download(public_path('assets/' . $file));
     }
+    public function update(Request $request, SuratKeluar $suratkeluar)
+    {
+        SuratKeluar::where('id', $suratkeluar->id)
+            ->update([
+                'tanggal_keluar' => $request->tanggal_keluar,
+                'nomor_surat' => $request->nomor_surat,
+                'perihal' => $request->perihal,
+                'uraian' => $request->uraian,
+                'tujuan' => $request->tujuan,
+                'file' => $request->file,
+            ]);
+        return redirect('suratkeluar');
+    }
+
     
     
     public function destroy(SuratKeluar $suratkeluar)
