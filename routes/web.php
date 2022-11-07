@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-
-use App\Http\Controllers\SuratKeluarController;
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SuratMasukController;
+use App\Http\Controllers\SuratKeluarController;
 
 
 
@@ -32,4 +31,11 @@ Route::get('/download/{file}', [SuratKeluarController::class, 'download'])->midd
 Route::delete('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'destroy'])->middleware('auth');
 Route::get('suratkeluar/{suratkeluar}/edit', [SuratKeluarController::class, 'edit']);
 Route::patch('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'update']);
+
+
+
+// SURAT MASUK
+Route::get('suratmasuk', [SuratMasukController::class, 'index'])->middleware('auth')->name('suratmasuk');
+Route::post('suratmasuk', [SuratMasukController::class, 'store'])->middleware('auth')->name('suratmasuk');
+Route::get('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'show'])->middleware('auth');
 require __DIR__ . '/auth.php';

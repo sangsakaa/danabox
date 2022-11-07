@@ -69,7 +69,7 @@ class SuratKeluarController extends Controller
             $file = $request->file;
             $file_name = time() . '.' . $file->getClientOriginalExtension();
             $request->file->move('assets', $file_name);
-            // $request->file;
+            
         }
         SuratKeluar::where('id', $suratkeluar->id)
             ->update([

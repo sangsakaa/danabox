@@ -1,30 +1,29 @@
 <x-app-layout>
     <x-slot name="header">
-        @section('title', ' | Surat Keluar' )
+        @section('title', ' | Surat Masuk' )
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
-                {{ __('Dashboard Surat Keluar') }}
+                {{ __('Dashboard Surat Masuk') }}
             </h2>
-
         </div>
     </x-slot>
     <div class="p-1 bg-white   shadow-md dark:bg-dark-eval-1">
-        <form action="/suratkeluar" method="post" enctype="multipart/form-data">
+        <form action="/suratmasuk" method="post" enctype="multipart/form-data">
             @csrf
             <div class=" grid sm:grid-cols-2 grid-cols-1  gap-2 capitalize">
                 <!-- <div class=" ">
                     <img class="img-preview  ">
                 </div> -->
-                <input type="date" name="tanggal_keluar" class="  border px-1 py-1 " title="Tanggal Surat Keluar" required>
-                <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
-                <input type="text" name="tujuan" class=" capitalize border px-1 py-1" placeholder="tujuan">
-                <input type="text" name="uraian" class=" capitalize border px-1 py-1" placeholder="uraian">
-                <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
-                <input type="file" name="file" id="">
                 <!-- <input type="file" name="image" class="" onchange="previewImage()" id="image"> -->
+                <input type="date" name="tanggal_masuk" class="  border px-1 py-1 " title="Tanggal Surat masuk" required>
+                <input type="date" name="tanggal_surat" class="  border px-1 py-1 " title="Tanggal Surat" required>
+                <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
+                <input type="text" name="pengirim" class=" capitalize border px-1 py-1" placeholder="pengirim">
+                <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
+                <input type="text" name="ket" class=" capitalize border px-1 py-1" placeholder="keterangan">
+                <input type="file" name="file" id="">
                 <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Surat Keluar
                 </button>
-
             </div>
 
         </form>
@@ -41,10 +40,11 @@
                 <thead class=" bg-white shadow-md dark:bg-dark  px-1 py-1  mb-1 text-purple-600 ">
                     <tr class=" text-left text-sm sm:text-xs capitalize border ">
                         <th class=" px-2 py-1">No</th>
-                        <th class=" px-1">Tgl Keluar</th>
+                        <th class=" px-1">Tgl Masuk</th>
+                        <th class=" px-1">Tgl Surat</th>
                         <th class=" px-1">nomor surat</th>
-                        <th class=" px-1">uraian</th>
-                        <th class=" px-1">Tujuan Surat</th>
+                        <th class=" px-1">Pengirim</th>
+                        <th class=" px-1">ket</th>
                         <th class=" px-1">Perihal</th>
                         <th class=" px-1 text-center">Unduh File</th>
                         <th class=" px-1  text-center">Aksi</th>
@@ -54,10 +54,11 @@
                     @foreach( $listSurat as $surat)
                     <tr class=" border border-bottom text-xs sm:text-xs  hover:bg-gray-50 dark:bg-dark-bg ">
                         <td class=" px-2 py-1 ">{{$loop->iteration}}</td>
-                        <td class=" px-1">{{$surat->tanggal_keluar}}</td>
+                        <td class=" px-1">{{$surat->tanggal_masuk}}</td>
+                        <td class=" px-1">{{$surat->tanggal_surat}}</td>
                         <td class=" px-1"><a href="/suratkeluar/{{$surat->id}}">{{$surat->nomor_surat}}</a></td>
-                        <td class=" px-1 capitalize">{{strtolower($surat->uraian)}}</td>
-                        <td class=" capitalize">{{strtolower($surat->tujuan)}}</td>
+                        <td class=" capitalize">{{strtolower($surat->pengirim)}}</td>
+                        <td class=" px-1 capitalize">{{strtolower($surat->ket)}}</td>
                         <td class=" capitalize">{{strtolower($surat->perihal)}}
                         </td>
                         <td class=" text-center p-1"><a type="button" class="btn btn-secondary bg-purple-600 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -66,7 +67,7 @@
                             </a></td>
                         <td class=" text-center">
                             <div class=" flex space-x-2  justify-center">
-                                <form action="/suratkeluar/{{$surat->id}}" method="post">
+                                <form action="/suratmasuk/{{$surat->id}}" method="post">
                                     @csrf
                                     @method('delete')
                                     <button class=" py-1 bg-red-600 text-white p-1 rounded-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -74,10 +75,10 @@
                                             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                         </svg></button>
                                 </form>
-                                <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratkeluar/{{$surat->id}}">
+                                <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}">
                                     <p class=" py-1">Detail</p>
                                 </a>
-                                <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratkeluar/{{$surat->id}}/edit">
+                                <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}/edit">
                                     <p class=" py-1">Edit</p>
                                 </a>
                             </div>

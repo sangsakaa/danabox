@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('setor', function (Blueprint $table) {
+        Schema::create('surat_masuk', function (Blueprint $table) {
             $table->id();
-            $table->date('tgl_setor');
-            $table->bigInteger('nasabah_id');
-            $table->bigInteger('penyetor_id');
-            $table->integer('setor_box')->nullable();
-            $table->integer('setor_sp')->nullable();
+            $table->date('tanggal_masuk');
+            $table->date('tanggal_surat');
+            $table->string('nomor_surat');
+            $table->string('pengirim')->nullable();
+            $table->string('perihal')->nullable();
+            $table->string('file')->nullable();
+            $table->string('ket');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('setor');
+        Schema::dropIfExists('surat_masuk');
     }
 };

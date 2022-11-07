@@ -5,12 +5,18 @@
             <x-icons.dashboard class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
-    <div x-transition x-show="isSidebarOpen || isSidebarHovered" class="text-sm text-gray-500">Surat Keluar</div>
+    <div x-transition x-show="isSidebarOpen || isSidebarHovered" class="text-sm text-gray-500">Menu Utama</div>
+    <x-sidebar.link title="Surat Masuk" href="{{ route('suratmasuk') }}" :isActive="request()->routeIs('suratmasuk')">
+        <x-slot name="icon">
+            <x-icons.inbox class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
     <x-sidebar.link title="Surat Keluar" href="{{ route('suratkeluar') }}" :isActive="request()->routeIs('suratkeluar')">
         <x-slot name="icon">
             <x-icons.sentto class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
+
 
 
 </x-perfect-scrollbar>
