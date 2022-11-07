@@ -81,7 +81,7 @@ class SuratKeluarController extends Controller
                 'tujuan' => $request->tujuan,
             'file' => $file_name,
             ]);
-        return redirect('suratkeluar');
+        return redirect()->back();
     }
 
     
