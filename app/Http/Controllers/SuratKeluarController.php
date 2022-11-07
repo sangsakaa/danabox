@@ -6,7 +6,7 @@ use App\Models\SuratKeluar;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-use Nette\Utils\Random;
+
 
 class SuratKeluarController extends Controller
 {
@@ -64,14 +64,22 @@ class SuratKeluarController extends Controller
     }
     public function update(Request $request, SuratKeluar $suratkeluar)
     {
+
+        if ($request->hasFile('file')) {
+            $file = $request->file;
+            $file_name = time() . '.' . $file->getClientOriginalExtension();
+            $request->file->move('assets', $file_name);
+            // $request->file;
+        }
         SuratKeluar::where('id', $suratkeluar->id)
             ->update([
+                
                 'tanggal_keluar' => $request->tanggal_keluar,
                 'nomor_surat' => $request->nomor_surat,
                 'perihal' => $request->perihal,
                 'uraian' => $request->uraian,
                 'tujuan' => $request->tujuan,
-                'file' => $request->file,
+            'file' => $file_name,
             ]);
         return redirect('suratkeluar');
     }
