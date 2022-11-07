@@ -65,6 +65,7 @@ class SuratKeluarController extends Controller
     public function update(Request $request, SuratKeluar $suratkeluar)
     {
 
+        $file_name = $suratkeluar->file;
         if ($request->hasFile('file')) {
             $file = $request->file;
             $file_name = time() . '.' . $file->getClientOriginalExtension();
