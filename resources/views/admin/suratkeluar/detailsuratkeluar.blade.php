@@ -58,7 +58,7 @@
             </table>
         </div>
         <div class=" mt-1 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-            <iframe height="1000px" width="100%" src="/assets/{{$suratkeluar->file}}" frameborder="0">file</iframe>
+            <iframe height="1000px" width="100%" src="/storage/{{$suratkeluar->file}}" frameborder="0">file</iframe>
         </div>
         <script>
             function printContent(el) {

@@ -31,13 +31,13 @@ class SuratKeluarController extends Controller
             ]
         );
     }
-    
+
     public function store(Request $request)
     {
         $data = new SuratKeluar();
         $file = $request->file;
         $file_name = time() . '.' . $file->getClientOriginalExtension();
-        $request->file->move('assets', $file_name);
+        $request->file->storeAs('public', $file_name);
         $data->file = $file_name;
         $data->tanggal_keluar = $request->tanggal_keluar;
         $data->nomor_surat = $request->nomor_surat;
@@ -56,24 +56,24 @@ class SuratKeluarController extends Controller
                 'suratkeluar' => $suratkeluar,
             ]
         );
-        
+
     }
     public function download(Request $request, $file)
     {
-        return response()->download(public_path('assets/' . $file));
+        return response()->download(public_path('storage/' . $file));
     }
     public function update(Request $request, SuratKeluar $suratkeluar)
     {
         $file_name = $suratkeluar->file;
         if ($request->hasFile('file')) {
-            Storage::delete($suratkeluar->id);
+            Storage::delete('public/' . $suratkeluar->file);
             $file = $request->file;
             $file_name = time() . '.' . $file->getClientOriginalExtension();
-            $request->file->move('assets', $file_name);
+            $request->file->storeAs('public', $file_name);
         }
         SuratKeluar::where('id', $suratkeluar->id)
             ->update([
-                
+
                 'tanggal_keluar' => $request->tanggal_keluar,
                 'nomor_surat' => $request->nomor_surat,
                 'perihal' => $request->perihal,
@@ -84,11 +84,10 @@ class SuratKeluarController extends Controller
         return redirect()->back();
     }
 
-    
-    
     public function destroy(SuratKeluar $suratkeluar)
     {
         SuratKeluar::destroy($suratkeluar->id);
+        Storage::delete('public/' . $suratkeluar->file);
         return redirect()->back();
     }
 }
