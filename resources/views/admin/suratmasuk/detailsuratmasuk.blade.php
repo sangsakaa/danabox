@@ -87,20 +87,29 @@
                     </tr>
                     <tr>
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
-                            <div class=" h-56 ">
+                            <div class=" h-40  ">
                                 Isi Disposisi :
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
-                            <div class=" h-56 ">
+                            <div class=" h-40 ">
                                 diteruskan Kepada :
                             </div>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
+            <div class="flex grid-cols-2 w-full">
+                <div class="  w-3/4 ">
+
+                </div>
+                <div class="   h-32   ">
+                    <p>Rektor</p>
+                    <p class=" mt-20  ">Dr.Fauziah Isnaini, M.Pd.I <br>NIP.197003162002092004</p>
+                </div>
+            </div>
         </div>
+
         <div class=" mt-1 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
             <iframe height="1000px" width="100%" src="/assets/{{$suratmasuk->file}}" frameborder="0">file</iframe>
         </div>
