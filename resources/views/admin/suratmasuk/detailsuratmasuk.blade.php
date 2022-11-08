@@ -87,19 +87,19 @@
                     </tr>
                     <tr>
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
-                            <div class="  h-32  ">
+                            <div class="   h-36  ">
                                 Isi Disposisi :
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
-                            <div class="  h-32 ">
+                            <div class="  h-36 ">
                                 diteruskan Kepada :
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div class=" border border-green-800 py-1  flex grid-cols-2 w-full">
+            <div class="  py-1  flex grid-cols-2 w-full">
                 <div class="  w-3/4 ">
 
                 </div>
