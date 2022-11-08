@@ -24,15 +24,15 @@
     </div>
     <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <div id="div1" class="p-1 bg-white   shadow-md dark:bg-dark-eval-1">
-            <table class=" border border-green-800 w-full ">
+            <table class=" border border-purple-800 w-full ">
                 <thead>
                     <tr>
                         <th class=" uppercase py-2" colspan="4">lembar diposisi</th>
                     </tr>
                 </thead>
-                <tbody class=" border border-green-800">
+                <tbody class=" border border-purple-800">
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>Indek Berkas</div>
                                 <div> : {{$suratmasuk->pengirim}}</div>
@@ -40,7 +40,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>Tanggal Surat</div>
                                 <div> : {{$suratmasuk->tanggal_surat}}</div>
@@ -48,7 +48,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->nomor_surat}}</div>
@@ -56,7 +56,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>Asal Surat</div>
                                 <div> : {{$suratmasuk->pengirim}}</div>
@@ -65,7 +65,7 @@
                     </tr>
 
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>Keterangan </div>
                                 <div> : {{$suratmasuk->ket}}</div>
@@ -73,7 +73,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class=" border border-green-800">
+                        <td colspan="4" class=" border border-purple-800">
                             <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->tanggal_masuk}}</div>
@@ -81,17 +81,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class=" border border-green-800 px-4 py-1">
+                        <td colspan="4" class=" border border-purple-800 px-4 py-1">
                             Tanggal Penyelesaian :
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
+                        <td colspan="2" class=" w-3/1 border  max-h-96 border-purple-800 px-4 py-1">
                             <div class=" h-96 max-h-96">
                                 Isi Disposisi :
                             </div>
                         </td>
-                        <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
+                        <td colspan="2" class=" w-1/3  border border-purple-800 px-4 py-1">
                             <div class=" h-96 max-h-96">
                                 diteruskan Kepada :
                             </div>
