@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 ">
                                 <div>Tanggal Surat</div>
                                 <div> : {{$suratmasuk->tanggal_surat}}</div>
                             </div>
@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 ">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->nomor_surat}}</div>
                             </div>
@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 ">
                                 <div>Asal Surat</div>
                                 <div> : {{$suratmasuk->pengirim}}</div>
                             </div>
@@ -66,7 +66,7 @@
 
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 ">
                                 <div>Keterangan </div>
                                 <div> : {{$suratmasuk->ket}}</div>
                             </div>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 ">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->tanggal_masuk}}</div>
                             </div>
@@ -87,12 +87,12 @@
                     </tr>
                     <tr>
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
-                            <div class=" h-36  ">
+                            <div class="  h-32  ">
                                 Isi Disposisi :
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
-                            <div class=" h-36 ">
+                            <div class="  h-32 ">
                                 diteruskan Kepada :
                             </div>
                         </td>
