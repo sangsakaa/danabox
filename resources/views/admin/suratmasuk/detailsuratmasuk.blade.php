@@ -99,7 +99,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="flex grid-cols-2 w-full">
+            <div class=" border border-green-800 py-1  flex grid-cols-2 w-full">
                 <div class="  w-3/4 ">
 
                 </div>
