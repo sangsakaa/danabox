@@ -18,7 +18,7 @@
                 <input type="date" name="tanggal_masuk" class="  border px-1 py-1 " title="Tanggal Surat masuk" required>
                 <input type="date" name="tanggal_surat" class="  border px-1 py-1 " title="Tanggal Surat" required>
                 <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
-                <input type="text" name="pengirim" class=" capitalize border px-1 py-1" placeholder="pengirim">
+                <input type="text" name="pengirim" class=" capitalize border px-1 py-1" placeholder="pengirim / Asal Surat">
                 <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
                 <input type="text" name="ket" class=" capitalize border px-1 py-1" placeholder="keterangan">
                 <input type="file" name="file" id="">
@@ -43,7 +43,7 @@
                         <th class=" px-1">Tgl Masuk</th>
                         <th class=" px-1">Tgl Surat</th>
                         <th class=" px-1">nomor surat</th>
-                        <th class=" px-1">Pengirim</th>
+                        <th class=" px-1">Asal Surat</th>
                         <th class=" px-1">ket</th>
                         <th class=" px-1">Perihal</th>
                         <th class=" px-1 text-center">Unduh File</th>

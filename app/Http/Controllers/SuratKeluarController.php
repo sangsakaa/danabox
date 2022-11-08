@@ -66,10 +66,10 @@ class SuratKeluarController extends Controller
     {
         $file_name = $suratkeluar->file;
         if ($request->hasFile('file')) {
+            Storage::delete($suratkeluar->id);
             $file = $request->file;
             $file_name = time() . '.' . $file->getClientOriginalExtension();
             $request->file->move('assets', $file_name);
-            
         }
         SuratKeluar::where('id', $suratkeluar->id)
             ->update([

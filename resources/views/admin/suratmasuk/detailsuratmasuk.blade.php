@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+        @section('title', ' | Disposisi Surat Masuk' )
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('View File') }}
@@ -31,26 +32,36 @@
                 </thead>
                 <tbody class=" border">
                     <tr>
-                        <td colspan="2" class=" border">
-                            <div class=" text-sm p-4 grid grid-cols-2">
-                                <div>Tanggal Surat Keluar</div>
-                                <div> : {{$suratmasuk->tanggal_keluar}}</div>
-                                <div>Tujuan Surat</div>
-                                <div> : {{$suratmasuk->nomor_surat}}</div>
-                            </div>
-                        </td>
-                        <td colspan="2" class=" border">
-                            <div class=" text-sm p-4 grid grid-cols-2">
-                                <div>Tanggal Surat </div>
+                        <td colspan="4" class=" border">
+                            <div class=" text-sm p-4  grid grid-cols-2 gap-4">
+                                <div>Indek Berkas</div>
+                                <div> : {{$suratmasuk->pengirim}}</div>
+                                <div>Tanggal Surat Masuk</div>
                                 <div> : {{$suratmasuk->tanggal_surat}}</div>
-                                <div>Tujuan Surat</div>
-                                <div> : {{$suratmasuk->tujuan}}</div>
+                                <div>Nomor Surat</div>
+                                <div> : {{$suratmasuk->nomor_surat}}</div>
+                                <div>Asal Surat</div>
+                                <div> : {{$suratmasuk->pengirim}}</div>
+                                <div>Perihal</div>
+                                <div> : {{$suratmasuk->perihal}}</div>
+                                <div>Keteragan</div>
+                                <div> : {{$suratmasuk->ket}}</div>
+                                <div>diterima Tanggal</div>
+                                <div> : {{$suratmasuk->tanggal_masuk}}</div>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="4" class=" border px-4 py-1">
                             Pengirim : {{$suratmasuk->pengirim}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class=" border px-4 py-1">
+                            Isi Disposisi :
+                        </td>
+                        <td colspan="2" class=" h-90 border px-4 py-1">
+                            Diteruskan Kepada :
                         </td>
                     </tr>
 
