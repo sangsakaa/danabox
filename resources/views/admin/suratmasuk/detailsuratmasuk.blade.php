@@ -87,12 +87,12 @@
                     </tr>
                     <tr>
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
-                            <div class=" h-96 max-h-96">
+                            <div class=" h-56 ">
                                 Isi Disposisi :
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
-                            <div class=" h-96 max-h-96">
+                            <div class=" h-56 ">
                                 diteruskan Kepada :
                             </div>
                         </td>
