@@ -6,7 +6,7 @@
                 {{ __('View File') }}
             </h2>
             <div class=" grid grid-cols-1 px-6">
-                <x-button target="_blank" href="https://github.com/kamona-wd/kui-laravel-breeze" variant="black" class="justify-center max-w-xs gap-2">
+                <x-button target="_blank" href="https://github.com/kamona-wd/kui-laravel-breeze" variant="black" class="justify-center max-w-xs gap-1">
                     <x-icons.github class="w-6 h-6" aria-hidden="true" />
                     <span>Star on Github</span>
                 </x-button>
@@ -33,7 +33,7 @@
                 <tbody class=" border border-green-800">
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>Indek Berkas</div>
                                 <div> : {{$suratmasuk->pengirim}}</div>
                             </div>
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>Tanggal Surat</div>
                                 <div> : {{$suratmasuk->tanggal_surat}}</div>
                             </div>
@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->nomor_surat}}</div>
                             </div>
@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>Asal Surat</div>
                                 <div> : {{$suratmasuk->pengirim}}</div>
                             </div>
@@ -66,7 +66,7 @@
 
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>Keterangan </div>
                                 <div> : {{$suratmasuk->ket}}</div>
                             </div>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td colspan="4" class=" border border-green-800">
-                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-2">
+                            <div class=" text-sm px-2 py-2  grid grid-cols-2 gap-1">
                                 <div>diterima Tanggal</div>
                                 <div> : {{$suratmasuk->tanggal_masuk}}</div>
                             </div>
@@ -87,12 +87,12 @@
                     </tr>
                     <tr>
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
-                            <div class=" h-40  ">
+                            <div class=" h-36  ">
                                 Isi Disposisi :
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
-                            <div class=" h-40 ">
+                            <div class=" h-36 ">
                                 diteruskan Kepada :
                             </div>
                         </td>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="   h-32   ">
                     <p>Rektor</p>
-                    <p class=" mt-20  ">Dr.Fauziah Isnaini, M.Pd.I <br>NIP.197003162002092004</p>
+                    <p class=" mt-16  ">Dr.Fauziah Isnaini, M.Pd.I <br>NIP.197003162002092004</p>
                 </div>
             </div>
         </div>
