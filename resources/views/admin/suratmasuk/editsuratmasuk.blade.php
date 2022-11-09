@@ -1,9 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        @section('title', ' | Surat Keluar' )
+        @section('title', ' | Surat Masuk' )
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
-                {{ __('Dashboard Edit Surat Keluar') }}
+                {{ __('Dashboard Edit Surat Masuk') }}
             </h2>
 
         </div>
