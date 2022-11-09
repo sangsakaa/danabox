@@ -53,7 +53,6 @@
                             Perihal : {{$suratkeluar->perihal}}
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>

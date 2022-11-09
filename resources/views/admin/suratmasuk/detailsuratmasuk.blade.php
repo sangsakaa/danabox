@@ -5,12 +5,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('View File') }}
             </h2>
-            <div class=" grid grid-cols-1 px-6">
-                <x-button target="_blank" href="https://github.com/kamona-wd/kui-laravel-breeze" variant="black" class="justify-center max-w-xs gap-1">
-                    <x-icons.github class="w-6 h-6" aria-hidden="true" />
-                    <span>Star on Github</span>
-                </x-button>
-            </div>
+
         </div>
     </x-slot>
     <div class=" grid grid-cols-1 p-2">
@@ -111,7 +106,7 @@
         </div>
 
         <div class=" mt-1 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-            <iframe height="1000px" width="100%" src="/assets/{{$suratmasuk->file}}" frameborder="0">file</iframe>
+            <iframe height="1000px" width="100%" src="/public/{{$suratmasuk->file}}" frameborder="0">file</iframe>
         </div>
         <script>
             function printContent(el) {

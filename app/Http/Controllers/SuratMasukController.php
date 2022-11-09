@@ -86,9 +86,15 @@ class SuratMasukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit(SuratMasuk $suratMasuk)
+    {   
+        return view(
+            'admin/suratmasuk/editsuratmasuk',
+            [
+                'suratmasuk' => $suratMasuk,
+            ]
+        );
+
     }
 
     /**
@@ -109,8 +115,10 @@ class SuratMasukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(SuratMasuk $suratMasuk)
     {
-        //
+       SuratMasuk::destroy($suratMasuk->id);
+        Storage::delete('public/' . $suratMasuk->file);
+        return redirect()->back();  
     }
 }
