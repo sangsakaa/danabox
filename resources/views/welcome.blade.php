@@ -410,7 +410,7 @@
 
 <body class="antialiased">
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <div class=" font-semibold text-orange-500 text-5xl uppercase">
                     E-Surat
@@ -513,7 +513,7 @@
                 </div>
 
                 <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    &copy E-Surat Madin Wahidiyah
+                    &copy E-Surat 2022
                 </div>
             </div>
         </div>
