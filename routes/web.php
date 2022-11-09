@@ -37,7 +37,7 @@ Route::patch('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'update
 // SURAT MASUK
 Route::get('suratmasuk', [SuratMasukController::class, 'index'])->middleware('auth')->name('suratmasuk');
 
-Route::get('suratmasuk/{suratMasuk}',[SuratMasukController::class,'edit'])->middleware('auth');
+Route::get('suratmasuk/{suratMasuk}/edit', [SuratMasukController::class, 'edit'])->middleware('auth');
 
 Route::post('suratmasuk', [SuratMasukController::class, 'store'])->middleware('auth')->name('suratmasuk');
 
