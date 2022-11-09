@@ -19,7 +19,7 @@
                 <input type="text" name="uraian" class=" capitalize border px-1 py-1" placeholder="uraian" value="{{$suratkeluar->uraian}}">
                 <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal" value="{{$suratkeluar->perihal}}">
                 <input type="file" name="file" id="">
-                <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Update Surat
+                <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Update Surat Keluar
                 </button>
             </div>
         </form>

@@ -20,7 +20,7 @@
                 <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal" value="{{$suratmasuk->perihal}}">
                 <input type="text" name="ket" class=" capitalize border px-1 py-1" placeholder="keterangan" value="{{$suratmasuk->ket}}">
                 <input type="file" name="file" id="">
-                <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Surat Keluar
+                <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Update Surat Masuk
                 </button>
             </div>
         </form>
