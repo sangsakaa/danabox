@@ -25,7 +25,7 @@
             </div>
         </form>
         <div class=" mt-2 w-full">
-            <iframe width="100%" height="1000px" src="{{ asset('storage' . $suratmasuk->file)}}" frameborder="0"></iframe>
+            <iframe width="100%" height="1000px" src="{{ asset('storage/' . $suratmasuk->file)}}" frameborder="0"></iframe>
         </div>
     </div>
 
