@@ -35,6 +35,7 @@ Route::patch('suratkeluar/{suratkeluar}', [SuratKeluarController::class, 'update
 
 
 // SURAT MASUK
+Route::get('/download/{file}', [SuratMasukController::class, 'download'])->middleware('auth');
 Route::get('suratmasuk', [SuratMasukController::class, 'index'])->middleware('auth')->name('suratmasuk');
 
 Route::get('suratmasuk/{suratMasuk}/edit', [SuratMasukController::class, 'edit'])->middleware('auth');
@@ -44,4 +45,6 @@ Route::post('suratmasuk', [SuratMasukController::class, 'store'])->middleware('a
 Route::get('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'show'])->middleware('auth');
 
 Route::delete('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'destroy'])->middleware('auth');
+
+Route::patch('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'update']);
 require __DIR__ . '/auth.php';

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\SuratMasuk;
+use App\Models\SuratKeluar;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class SuratMasukController extends Controller
 {
@@ -104,9 +106,31 @@ class SuratMasukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function download(Request $request, $file)
     {
-        //
+        return response()->download(public_path('storage/' . $file));
+    }
+    public function update(Request $request, SuratMasuk $suratMasuk)
+    {
+        $file_name = $suratMasuk->file;
+        if ($request->hasFile('file')) {
+            Storage::delete('public/' . $suratMasuk->file);
+            $file = $request->file;
+            $file_name = time() . '.' . $file->getClientOriginalExtension();
+            $request->file->storeAs('public', $file_name);
+        }
+        SuratMasuk::where('id', $suratMasuk->id)
+            ->update([
+
+                'tanggal_masuk' => $request->tanggal_masuk,
+                'tanggal_surat' => $request->tanggal_surat,
+                'nomor_surat' => $request->nomor_surat,
+                'perihal' => $request->perihal,
+                'pengirim' => $request->pengirim,
+                'ket' => $request->ket,
+                'file' => $file_name,
+            ]);
+        return redirect()->back();
     }
 
     /**
