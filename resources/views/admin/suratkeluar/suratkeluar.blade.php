@@ -17,20 +17,20 @@
                 </div> -->
                 <div class=" grid grid-cols-2 gap-2">
                     <label for="">Tanggal Surat Keluar</label>
-                    <input type="date" name="tanggal_keluar" class="  border px-1 py-1 " title="Tanggal Surat Keluar" required>
+                    <input type="date" name="tanggal_keluar" class="  text-sm border px-1 py-1 " title="Tanggal Surat Keluar" required>
                     <label for=""> Nomor surat </label>
-                    <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
+                    <input type="text" name="nomor_surat" class=" capitalize text-sm border px-1 py-1" placeholder="nomor surat">
                     <label for="">tujuan</label>
-                    <input type="text" name="tujuan" class=" capitalize border px-1 py-1" placeholder="tujuan">
+                    <input type="text" name="tujuan" class=" capitalize text-sm border px-1 py-1" placeholder="tujuan">
 
 
                 </div>
                 <div class=" grid grid-cols-2 gap-2">
                     <label for="">uraian</label>
-                    <input type="text" name="uraian" class=" capitalize border px-1 py-1" placeholder="uraian">
+                    <input type="text" name="uraian" class=" capitalize text-sm border px-1 py-1" placeholder="uraian">
                     <label for="">perihal</label>
-                    <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
-                    <input type="file" name="file" id="" class=" capitalize">
+                    <input type="text" name="perihal" class=" capitalize text-sm border px-1 py-1" placeholder="perihal">
+                    <input type="file" name="file" id="" class=" capitalize text-sm">
                     <!-- <input type="file" name="image" class="" onchange="previewImage()" id="image"> -->
                     <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Simpan
                     </button>
