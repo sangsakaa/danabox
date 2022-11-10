@@ -9,9 +9,9 @@ use Illuminate\Routing\Controller;
 
 class InstansiController extends Controller
 {
-    public function index(Instansi $instansi)
+    public function index()
     {
-        // $instansi = Instansi::all();
+        $instansi = Instansi::all();
         return view('admin.instansi.instansi', ['instansi' => $instansi]);
     }
     public function store(Request $request)

@@ -31,8 +31,11 @@
           <button class=" bg-purple-600 py-1 text-white">Simpan</button>
         </div>
       </form>
-      <div class=" mt-2 w-full">
-        <iframe width="100%" height="1000px" src="{{ asset('storage/' . $instansi->file)}}" frameborder="0"></iframe>
+      <div>
+        @foreach ($instansi as $unit)
+        {{$unit->file}}
+        <iframe width="100%" height="1000px" src="{{ asset('storage/' . $unit->file)}}" frameborder="0"></iframe>
+        @endforeach
       </div>
     </div>
   </div>
