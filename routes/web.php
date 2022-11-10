@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InstansiController;
 use App\Http\Controllers\SuratMasukController;
 use App\Http\Controllers\SuratKeluarController;
 
@@ -47,4 +48,8 @@ Route::get('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'show'])->mi
 Route::delete('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'destroy'])->middleware('auth');
 
 Route::patch('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'update']);
+
+
+// Instansi
+Route::get('instansi', [InstansiController::class, 'index'])->middleware(['auth'])->name('instansi');
 require __DIR__ . '/auth.php';

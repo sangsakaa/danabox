@@ -10,12 +10,12 @@
     <div class="p-1 bg-white   shadow-md dark:bg-dark-eval-1">
         <form action="/suratmasuk" method="post" enctype="multipart/form-data">
             @csrf
-            <div class=" grid sm:grid-cols-2 grid-cols-1  gap-2 capitalize">
+            <div class=" grid sm:grid-cols-2 grid-cols-1  gap-1 capitalize">
                 <!-- <div class=" ">
                     <img class="img-preview  ">
                 </div> -->
                 <!-- <input type="file" name="image" class="" onchange="previewImage()" id="image"> -->
-                <div class=" w-full grid grid-cols-2 gap-2">
+                <div class="  grid grid-cols-1 gap-1">
                     <label for="">Tanggal Surat Masuk</label>
                     <input type="date" name="tanggal_masuk" class="  border text-sm px-1 py-1 " title="Tanggal Surat masuk" required>
                     <label for="">Tanggal Surat</label>
@@ -25,16 +25,22 @@
                     <label for="">Pengirim / Asal Surat</label>
                     <input type="text" name="pengirim" class=" capitalize border text-sm px-1 py-1" placeholder="pengirim / Asal Surat">
                 </div>
-                <div class=" w-full grid grid-cols-2 gap-2">
+                <div class=" w-full grid grid-cols-1 gap-1">
+
                     <label for="">Perihal</label>
                     <input type="text" name="perihal" class=" capitalize border text-sm px-1 py-1" placeholder="perihal">
                     <label for="">Keterangan</label>
                     <input type="text" name="ket" class=" capitalize border text-sm px-1 py-1" placeholder="keterangan">
-                    <label for="">Uploud File</label>
+
+                    <label for="">File Uploud</label>
                     <input type="file" name="file" id="" class=" text-sm">
-                    <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Simpan
+                    <button type=" submit" class=" bg-purple-600 text-white py-1 px-4 w-1/4"> Simpan
                     </button>
+                    <label for="" class=" text-red-600">File : PDF , Jpeg, jpg</label>
                 </div>
+            </div>
+            <div class=" grid justify-end">
+
             </div>
         </form>
     </div>

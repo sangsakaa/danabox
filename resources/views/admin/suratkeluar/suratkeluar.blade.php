@@ -15,7 +15,7 @@
                 <!-- <div class=" ">
                     <img class="img-preview  ">
                 </div> -->
-                <div class=" grid grid-cols-2 gap-2">
+                <div class=" grid grid-cols-1 gap-1">
                     <label for="">Tanggal Surat Keluar</label>
                     <input type="date" name="tanggal_keluar" class="  text-sm border px-1 py-1 " title="Tanggal Surat Keluar" required>
                     <label for=""> Nomor surat </label>
@@ -25,7 +25,7 @@
 
 
                 </div>
-                <div class=" grid grid-cols-2 gap-2">
+                <div class=" grid grid-cols-1 gap-1">
                     <label for="">uraian</label>
                     <input type="text" name="uraian" class=" capitalize text-sm border px-1 py-1" placeholder="uraian">
                     <label for="">perihal</label>
