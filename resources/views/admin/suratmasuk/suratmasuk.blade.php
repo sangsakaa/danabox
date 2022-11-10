@@ -17,21 +17,21 @@
                 <!-- <input type="file" name="image" class="" onchange="previewImage()" id="image"> -->
                 <div class=" w-full grid grid-cols-2 gap-2">
                     <label for="">Tanggal Surat Masuk</label>
-                    <input type="date" name="tanggal_masuk" class="  border px-1 py-1 " title="Tanggal Surat masuk" required>
+                    <input type="date" name="tanggal_masuk" class="  border text-sm px-1 py-1 " title="Tanggal Surat masuk" required>
                     <label for="">Tanggal Surat</label>
-                    <input type="date" name="tanggal_surat" class="  border px-1 py-1 " title="Tanggal Surat" required>
+                    <input type="date" name="tanggal_surat" class="  border text-sm px-1 py-1 " title="Tanggal Surat" required>
                     <label for="">Nomor Surat</label>
-                    <input type="text" name="nomor_surat" class=" capitalize border px-1 py-1" placeholder="nomor surat">
+                    <input type="text" name="nomor_surat" class=" capitalize border text-sm px-1 py-1" placeholder="nomor surat">
                     <label for="">Pengirim / Asal Surat</label>
-                    <input type="text" name="pengirim" class=" capitalize border px-1 py-1" placeholder="pengirim / Asal Surat">
+                    <input type="text" name="pengirim" class=" capitalize border text-sm px-1 py-1" placeholder="pengirim / Asal Surat">
                 </div>
                 <div class=" w-full grid grid-cols-2 gap-2">
                     <label for="">Perihal</label>
-                    <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
+                    <input type="text" name="perihal" class=" capitalize border text-sm px-1 py-1" placeholder="perihal">
                     <label for="">Keterangan</label>
-                    <input type="text" name="ket" class=" capitalize border px-1 py-1" placeholder="keterangan">
+                    <input type="text" name="ket" class=" capitalize border text-sm px-1 py-1" placeholder="keterangan">
                     <label for="">Uploud File</label>
-                    <input type="file" name="file" id="" class=" text-xs">
+                    <input type="file" name="file" id="" class=" text-sm">
                     <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Simpan
                     </button>
                 </div>
