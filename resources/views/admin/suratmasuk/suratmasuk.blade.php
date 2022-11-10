@@ -26,14 +26,13 @@
                     <input type="text" name="pengirim" class=" capitalize border px-1 py-1" placeholder="pengirim / Asal Surat">
                 </div>
                 <div class=" w-full grid grid-cols-2 gap-2">
-
                     <label for="">Perihal</label>
                     <input type="text" name="perihal" class=" capitalize border px-1 py-1" placeholder="perihal">
                     <label for="">Keterangan</label>
                     <input type="text" name="ket" class=" capitalize border px-1 py-1" placeholder="keterangan">
                     <label for="">Uploud File</label>
-                    <input type="file" name="file" id="">
-                    <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Surat Keluar
+                    <input type="file" name="file" id="" class=" text-xs">
+                    <button type=" submit" class=" bg-purple-600 text-white py-1 px-4"> Simpan
                     </button>
                 </div>
             </div>
