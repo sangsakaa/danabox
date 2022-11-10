@@ -33,7 +33,7 @@
             </div>
         </form>
         <div class=" mt-2 w-full">
-            <iframe width="100%" height="1000px" src="{{ asset('storage/app/public/public' . $suratkeluar->file)}}" frameborder="0"></iframe>
+            <iframe width="100%" height="1000px" src="{{ asset('storage/' . $suratkeluar->file)}}" frameborder="0"></iframe>
         </div>
     </div>
 
