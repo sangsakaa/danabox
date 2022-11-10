@@ -21,7 +21,7 @@
                     <label for="">Nomor Surat</label>
                     <input type="text" name="nomor_surat" class=" capitalize border text-sm px-1 py-1" placeholder="nomor surat" value="{{$suratmasuk->nomor_surat}}">
                     <label for="">Pengirim</label>
-                    <input type="text" name="pengirim" class=" capitalize border text-sm px-1 py-1" placeholder="pengirim / Asal Surat" value="{{$suratmasuk->id}}">
+                    <input type="text" name="pengirim" class=" capitalize border text-sm px-1 py-1" placeholder="pengirim / Asal Surat" value="{{$suratmasuk->pengirim}}">
                 </div>
                 <div class=" w-full grid grid-cols-2 gap-2">
                     <label for="">Perihal</label>
