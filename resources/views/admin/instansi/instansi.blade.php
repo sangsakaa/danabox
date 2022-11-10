@@ -9,7 +9,7 @@
   </x-slot>
   <div class=" grid grid-cols-1 p-2">
     <div class=" bg-white p-2">
-      <form action="" method="post">
+      <form action="/instansi" method="post" enctype="multipart/form-data">
         @csrf
         <div class=" grid grid-cols-2 gap-2">
           <div class=" grid grid-cols-1">
@@ -22,7 +22,7 @@
           </div>
           <div class=" grid grid-cols-1">
             <label for="">File Uploud</label>
-            <input type="file" name="logo_instansi" class="  py-1" placeholder="logo_instansi">
+            <input type="file" name="file" class="  py-1" placeholder="logo_instansi">
             <label for="">Alamat Instansi</label>
             <input type="text" name="alamat_instansi" class=" border py-1" placeholder="alamat_instansi">
             <label for="">Email Instansi</label>
@@ -31,7 +31,9 @@
           <button class=" bg-purple-600 py-1 text-white">Simpan</button>
         </div>
       </form>
-
+      <div class=" mt-2 w-full">
+        <iframe width="100%" height="1000px" src="{{ asset('storage/' . $instansi->file)}}" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </x-app-layout>

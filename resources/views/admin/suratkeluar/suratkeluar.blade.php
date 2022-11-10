@@ -22,8 +22,6 @@
                     <input type="text" name="nomor_surat" class=" capitalize text-sm border px-1 py-1" placeholder="nomor surat">
                     <label for="">tujuan</label>
                     <input type="text" name="tujuan" class=" capitalize text-sm border px-1 py-1" placeholder="tujuan">
-
-
                 </div>
                 <div class=" grid grid-cols-1 gap-1">
                     <label for="">uraian</label>

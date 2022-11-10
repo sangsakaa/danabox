@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_instansi')->nullable();
             $table->string('nama_kepala_instansi')->nullable();
             $table->string('status_kepala_instansi')->nullable();
-            $table->string('logo_instansi')->nullable();
+            $table->string('file')->nullable();
             $table->string('alamat_instansi')->nullable();
             $table->string('email_instansi')->nullable();
             $table->timestamps();
