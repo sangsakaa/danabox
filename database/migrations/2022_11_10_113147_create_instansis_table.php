@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('instansi', function (Blueprint $table) {
             $table->id();
+            $table->string('nip_kepala_instansi')->nullable();
             $table->string('nama_instansi')->nullable();
             $table->string('nama_kepala_instansi')->nullable();
             $table->string('status_kepala_instansi')->nullable();

@@ -17,8 +17,8 @@
                 Cetak Diposisi</button>
         </div>
     </div>
-    <div class=" p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-        <div id="div1" class="p-1 bg-white   shadow-md dark:bg-dark-eval-1">
+    <div class=" overflow-hidden bg-white  dark:bg-dark-eval-1">
+        <div id="div1" class="p-4    dark:bg-dark-eval-1">
             <table class=" border border-green-800 w-full ">
                 <thead>
                     <tr>
@@ -84,37 +84,43 @@
                         <td colspan="2" class=" w-3/1 border  max-h-96 border-green-800 px-4 py-1">
                             <div class="   h-36  ">
                                 Isi Disposisi :
+
                             </div>
                         </td>
                         <td colspan="2" class=" w-1/3  border border-green-800 px-4 py-1">
                             <div class="  h-36 ">
                                 diteruskan Kepada :
+
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div class="  py-1  flex grid-cols-2 w-full">
-                <div class="  w-3/4 ">
-
+            <div class=" grid grid-cols-2    py-1 w-full">
+                <div class="  w-1/2">
                 </div>
-                <div class="   h-32   ">
-                    <p>Rektor</p>
-                    <p class=" mt-16  ">Dr.Fauziah Isnaini, M.Pd.I <br>NIP.197003162002092004</p>
+                <div class=" w-full  h-32   ">
+                    <p>{{$surat_masuk->status_kepala_instansi}}</p>
+                    <p>{{$surat_masuk->nama_instansi}}</p>
+                    <p class=" mt-14  ">{{$surat_masuk->nama_kepala_instansi}}
+                    <p>{{$surat_masuk->nip_kepala_instansi}}</p>
                 </div>
             </div>
         </div>
-
-        <div class=" mt-1 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
+    </div>
+    <div>
+        <div class=" mt-3 p-2 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
             <iframe width="100%" height="1000px" src="{{ asset('storage/' . $suratmasuk->file)}}" frameborder="0"></iframe>
         </div>
-        <script>
-            function printContent(el) {
-                var fullbody = document.body.innerHTML;
-                var printContent = document.getElementById(el).innerHTML;
-                document.body.innerHTML = printContent;
-                window.print();
-                document.body.innerHTML = fullbody;
-            }
-        </script>
+    </div>
+
+    <script>
+        function printContent(el) {
+            var fullbody = document.body.innerHTML;
+            var printContent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printContent;
+            window.print();
+            document.body.innerHTML = fullbody;
+        }
+    </script>
 </x-app-layout>

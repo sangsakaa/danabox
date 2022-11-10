@@ -72,11 +72,13 @@ class SuratMasukController extends Controller
      */
     public function show(SuratMasuk $suratMasuk)
     {
-        $surat_masuk = SuratMasuk::find($suratMasuk)->first();
+        $surat_masuk = SuratMasuk::query()
+            ->crossjoin('instansi')
+            ->find($suratMasuk)->first();
         return view(
             'admin/suratmasuk/detailsuratmasuk',
             [
-                'surat' => $surat_masuk,
+                'surat_masuk' => $surat_masuk,
                 'suratmasuk' => $suratMasuk
             ]
         );

@@ -23,6 +23,7 @@ class InstansiController extends Controller
         $request->file->storeAs('public', $file_name);
         $data->file = $file_name;
         $data->nama_instansi = $request->nama_instansi;
+        $data->nip_kepala_instansi = $request->nip_kepala_instansi;
         $data->nama_kepala_instansi = $request->nama_kepala_instansi;
         $data->status_kepala_instansi = $request->status_kepala_instansi;
         $data->alamat_instansi = $request->alamat_instansi;

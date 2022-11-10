@@ -14,6 +14,9 @@
         <div class=" grid grid-cols-2 gap-2">
           <div class=" grid grid-cols-1">
             <label for="">Nama Instansi</label>
+            <input type="hidden" name="suratmasuk_id" class=" border py-1" placeholder="nama_instansi" value="1">
+            <input type="text" name="nip_kepala_instansi" class=" border py-1" placeholder="nip_kepala_instansi">
+            <label for="">Nama Instansi</label>
             <input type="text" name="nama_instansi" class=" border py-1" placeholder="nama_instansi">
             <label for="">Nama Instansi</label>
             <input type="text" name="nama_kepala_instansi" class=" border py-1" placeholder="nama_kepala_instansi">
@@ -27,16 +30,16 @@
             <input type="text" name="alamat_instansi" class=" border py-1" placeholder="alamat_instansi">
             <label for="">Email Instansi</label>
             <input type="text" name="email_instansi" class=" border py-1" placeholder="email_instansi">
+            <div class=" text-red-600">* Wajib menggunakan Email Instansi</div>
+            <button class=" bg-purple-600 py-1 text-white">Simpan</button>
           </div>
-          <button class=" bg-purple-600 py-1 text-white">Simpan</button>
+
         </div>
       </form>
       <div>
-        @foreach ($instansi as $unit)
-        {{$unit->file}}
-        <iframe width="100%" height="1000px" src="{{ asset('storage/' . $unit->file)}}" frameborder="0"></iframe>
-        @endforeach
+
       </div>
+
     </div>
   </div>
 </x-app-layout>
