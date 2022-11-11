@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Instansi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 
 
 class InstansiController extends Controller
@@ -29,6 +30,12 @@ class InstansiController extends Controller
         $data->alamat_instansi = $request->alamat_instansi;
         $data->email_instansi = $request->email_instansi;
         $data->save();
+        return redirect()->back();
+    }
+    public function destroy(Instansi $instansi)
+    {
+        Instansi::destroy($instansi->id);
+        Storage::delete('public/' . $instansi->file);
         return redirect()->back();
     }
 }

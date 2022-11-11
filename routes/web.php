@@ -53,4 +53,5 @@ Route::patch('suratmasuk/{suratMasuk}', [SuratMasukController::class, 'update'])
 // Instansi
 Route::get('instansi', [InstansiController::class, 'index'])->middleware(['auth'])->name('instansi');
 Route::post('instansi', [InstansiController::class, 'store'])->middleware(['auth']);
+Route::delete('instansi/{instansi}', [InstansiController::class, 'destroy'])->middleware(['auth']);
 require __DIR__ . '/auth.php';

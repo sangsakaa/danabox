@@ -33,13 +33,39 @@
             <div class=" text-red-600">* Wajib menggunakan Email Instansi</div>
             <button class=" bg-purple-600 py-1 text-white">Simpan</button>
           </div>
-
         </div>
       </form>
-      <div>
-
-      </div>
-
     </div>
+  </div>
+  <div class=" p-4 bg-white ">
+    <span> Riwayat Kepala Instansi</span>
+    <table class=" w-full">
+      <thead>
+        <tr>
+          <th class=" border text-sm text-center">No</th>
+          <th class=" border text-sm text-center">Nama Instansi</th>
+          <th class=" border text-sm text-center">Nama Kepala Instansi</th>
+          <th class=" border text-sm text-center">Status Kepala Instansi</th>
+          <th class=" border text-sm text-center">Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($instansi as $unit)
+        <tr>
+          <td class=" border text-sm text-center">{{$loop->iteration}}</td>
+          <td class=" border text-sm text-center">{{$unit->nama_instansi}}</td>
+          <td class=" border text-sm text-center">{{$unit->nama_kepala_instansi}}</td>
+          <td class=" border text-sm text-center">{{$unit->status_kepala_instansi}}</td>
+          <td class=" border text-sm text-center">
+            <form action="/instansi/{{$unit->id}}" method="post">
+              @csrf
+              @method('delete')
+              <button class=" bg-red-600 text-white rounded-sm px-1 hover:bg-purple-800">Delete</button>
+            </form>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 </x-app-layout>
