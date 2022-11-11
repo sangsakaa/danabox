@@ -58,12 +58,15 @@
           <td class=" border text-sm text-center">{{$unit->nama_instansi}}</td>
           <td class=" border text-sm text-center">{{$unit->nama_kepala_instansi}}</td>
           <td class=" border text-sm text-center">{{$unit->status_kepala_instansi}}</td>
-          <td class=" border text-sm text-center">
+          <td class=" flex border text-sm text-center gap-1">
             <form action="/instansi/{{$unit->id}}" method="post">
               @csrf
               @method('delete')
               <button class=" bg-red-600 text-white rounded-sm px-1 hover:bg-purple-800">Delete</button>
             </form>
+            <a class=" bg-purple-600 text-white hover:bg-sky-400 px-1 rounded-sm" href="/instansi/{{$unit->id}}/edit">
+              <span class=" py-1">Edit</span>
+            </a>
           </td>
         </tr>
         @endforeach
