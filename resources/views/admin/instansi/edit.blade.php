@@ -15,6 +15,8 @@
         <div class=" grid grid-cols-2 gap-2">
           <div class=" grid grid-cols-1">
             <label for="">Nama Instansi</label>
+            <input type="text" name="nip_kepala_instansi" class=" border py-1" placeholder="nip_kepala_instansi" value="{{$instansi->nip_kepala_instansi}}">
+            <label for="">Nama Instansi</label>
             <input type="text" name="nama_instansi" class=" border py-1" placeholder="nama_instansi" value="{{$instansi->nama_instansi}}">
             <label for="">Nama Instansi</label>
             <input type="text" name="nama_kepala_instansi" class=" border py-1" placeholder="nama_kepala_instansi" value="{{$instansi->nama_kepala_instansi}}">
