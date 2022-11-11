@@ -34,7 +34,9 @@
           <button class=" bg-purple-600 py-1 text-white">Update</button>
         </div>
       </form>
-
+      <div class=" mt-2 w-full">
+        <iframe width="100%" height="1000px" src="{{ asset('storage/' . $instansi->file)}}" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </x-app-layout>
