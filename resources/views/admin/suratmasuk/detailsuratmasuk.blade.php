@@ -45,7 +45,7 @@
                     <tr>
                         <td colspan="4" class=" border border-green-800">
                             <div class=" text-sm px-2 py-1  grid grid-cols-2 ">
-                                <div>diterima Tanggal</div>
+                                <div>Nomor Surat</div>
                                 <div> : {{$suratmasuk->nomor_surat}}</div>
                             </div>
                         </td>
