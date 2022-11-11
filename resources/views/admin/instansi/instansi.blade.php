@@ -43,6 +43,7 @@
       <thead>
         <tr>
           <th class=" border text-sm text-center">No</th>
+          <th class=" border text-sm text-center">NIP</th>
           <th class=" border text-sm text-center">Nama Instansi</th>
           <th class=" border text-sm text-center">Nama Kepala Instansi</th>
           <th class=" border text-sm text-center">Status Kepala Instansi</th>
@@ -53,6 +54,7 @@
         @foreach($instansi as $unit)
         <tr>
           <td class=" border text-sm text-center">{{$loop->iteration}}</td>
+          <td class=" border text-sm text-center">{{$unit->nip_kepala_instansi}}</td>
           <td class=" border text-sm text-center">{{$unit->nama_instansi}}</td>
           <td class=" border text-sm text-center">{{$unit->nama_kepala_instansi}}</td>
           <td class=" border text-sm text-center">{{$unit->status_kepala_instansi}}</td>
