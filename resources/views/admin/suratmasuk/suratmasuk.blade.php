@@ -34,7 +34,7 @@
 
                     <label for="">File Uploud</label>
                     <input type="file" name="file" id="" class=" text-sm">
-                    <button type=" submit" class=" bg-green-800 text-white py-1 px-4 w-1/4"> Simpan
+                    <button type=" submit" class=" bg-green-900 text-white py-1 px-4 w-1/4"> Simpan
                     </button>
                     <label for="" class=" text-red-600">File : PDF , Jpeg, jpg</label>
                 </div>
@@ -48,7 +48,7 @@
         <form action="/suratkeluar" method="get" class="  gap-1">
             <div class=" flex grid-cols-2 gap-2">
                 <input type="text" name="cari" value="{{ request('cari') }}" class=" dark:bg-dark-bg border text-green-800 rounded-sm py-1  w-1/2 " placeholder=" Cari ...">
-                <button class=" bg-green-800 px-4 py-1 text-white">Cari</button>
+                <button class=" bg-green-900 px-4 py-1 text-white">Cari</button>
             </div>
         </form>
         <div class=" overflow-auto grid sm:grid-cols-1 grid-cols-1 ">
@@ -77,7 +77,7 @@
                         <td class=" px-1 capitalize">{{strtolower($surat->ket)}}</td>
                         <td class=" capitalize">{{strtolower($surat->perihal)}}
                         </td>
-                        <td class=" text-center p-1"><a type="button" class="btn btn-secondary bg-green-800 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <td class=" text-center p-1"><a type="button" class="btn btn-secondary bg-green-900 text-white rounded-md  hover:bg-sky-400" data-bs-toggle="tooltip" data-bs-placement="top" title="Download File" href="{{url('/download',$surat->file)}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
                             </a></td>
@@ -91,10 +91,10 @@
                                             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                         </svg></button>
                                 </form>
-                                <a class=" bg-green-800 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}">
+                                <a class=" bg-green-900 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}">
                                     <p class=" py-1">Disposisi</p>
                                 </a>
-                                <a class=" bg-green-800 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}/edit">
+                                <a class=" bg-green-900 text-white hover:bg-sky-400 px-1 rounded-sm" href="/suratmasuk/{{$surat->id}}/edit">
                                     <p class=" py-1">Edit</p>
                                 </a>
                             </div>
